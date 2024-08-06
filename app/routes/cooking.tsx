@@ -32,11 +32,11 @@ export default function Cooking() {
   const handleClick = (category: string) => {
     setIngredients(searchIngredients(category));
   };
-  const addIngredient = (i: string) => {
+  const addIngredient = (k: string) => {
     if (recipes.length >= 4) {
       return;
     }
-    setRecipes([...recipes, i]);
+    setRecipes([...recipes, k]);
   };
   const removeIngredient = (index: number) => {
     setFoods([]);
@@ -58,11 +58,13 @@ export default function Cooking() {
         <div className="flex mb-3">
           <img
             alt={t("ui.cookpot")}
+            src="/images/cookpot.png"
             onClick={() => setPot("cookpot")}
             className="w-16 h-16 border mr-3"
           />
           <img
             alt={t("ui.portablecookpot")}
+            src="/images/portablecookpot.png"
             onClick={() => setPot("portablecookpot")}
             className="w-16 h-16 border mr-10"
           />
@@ -79,7 +81,7 @@ export default function Cooking() {
               recipes.map((r, index) => (
                 <img
                   key={r + index}
-                  //src={ingredients[key]}
+                  src={`/images/${r}.png`}
                   className="w-16 h-16 border mr-3"
                   alt={r}
                   onClick={() => removeIngredient(index)}
@@ -93,7 +95,7 @@ export default function Cooking() {
               <NavLink key={r} to={`/food/${r}` + location.search}>
                 <img
                   key={r + index}
-                  //src={ingredients[key]}
+                  src={`/images/${r}.png`}
                   className="w-16 h-16 border mr-2"
                   alt={r}
                 />
@@ -104,91 +106,91 @@ export default function Cooking() {
       <div className="flex flex-row border-t border-blue-300 mt-5">
         <div className="flex flex-col justify-start border-r border-blue-300 mt-5 ">
           <p
-            className="w-24 h-9 border rounded-md mb-2"
+            className="w-24 h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("all")}
           >
             {t("ui.all")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("fruit")}
           >
             {t("ui.fruit")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("monster")}
           >
             {t("ui.monster")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("sweetener")}
           >
             {t("ui.sweetener")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("veggie")}
           >
             {t("ui.veggie")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("meat")}
           >
             {t("ui.meat")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("fish")}
           >
             {t("ui.fish")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("frozen")}
           >
             {t("ui.frozen")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("magic")}
           >
             {t("ui.magic")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("egg")}
           >
             {t("ui.egg")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("decoration")}
           >
             {t("ui.decoration")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("fat")}
           >
             {t("ui.fat")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("dairy")}
           >
             {t("ui.dairy")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("inedible")}
           >
             {t("ui.inedible")}
           </p>
           <p
-            className="h-9 border rounded-md mb-2"
+            className="h-9 border rounded-md mb-2 text-center content-center"
             onClick={() => handleClick("seed")}
           >
             {t("ui.seed")}
@@ -199,10 +201,10 @@ export default function Cooking() {
             Object.keys(ingredients).map((key) => (
               <img
                 key={key}
-                //src={ingredients[key]}
+                src={`/images/${key}.png`}
                 className="w-16 h-16 border ml-2 mb-2"
                 alt={t("ingredients." + key)}
-                onClick={() => addIngredient(ingredients[key])}
+                onClick={() => addIngredient(key)}
               />
             ))}
         </div>

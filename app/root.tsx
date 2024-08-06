@@ -67,10 +67,10 @@ export default function App() {
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>
         </h1>
         <div className="flex ">
-          <h1 className="mt-0 ml-6 h-6">
+          <h1 className="mt-0 h-6">
             <NavLink to={"cooking?lng=" + locale}>{t("ui.cooking")}</NavLink>
           </h1>
-          <h1 className="mt-0 ml-6 h-6">
+          <h1 className="mt-0 ml-3 h-6">
             <NavLink to={"foods?lng=" + locale}>{t("ui.foods")}</NavLink>
           </h1>
         </div>
@@ -78,7 +78,7 @@ export default function App() {
       <div className="flex w-full ml-0 mt-5 text-center content-center">
         <Outlet />
       </div>
-      <div className=" flex flex-col fixed bottom-10 right-10 justify-end items-center">
+      <div className=" flex flex-col fixed bottom-8 right-8 justify-end items-center">
         {show && (
           <div className="bg-white flex flex-col justify-center ">
             <p

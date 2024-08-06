@@ -21,41 +21,76 @@ export default function Food() {
   const { t } = useTranslation();
   return (
     <div className="flex flex-col w-full items-center ">
-      <img className="w-64 h-64 border" />
+      <img
+        src={`/images/cookbook_${foodname}.png`}
+        className="w-64 h-64 border"
+      />
       <p className="mt-5 text-2xl font-blod">{t("foods." + foodname)}</p>
       <div className="flex mt-5 items-center ">
         <span className="flex flex-col items-center">
-          <img className="w-16 h-16 border rounded-full" alt="cookpot" />
+          <img
+            src={food.pot ? `/images/${food.pot}.png` : "/images/cookpot.png"}
+            className="w-16 h-16 border rounded-full"
+            alt="cookpot"
+          />
           <p>{food.pot ? t("ui." + food.pot) : t("ui.cookpot")}</p>
         </span>
       </div>
       <div className="flex mt-5 justify-between w-80">
         <span>
-          <img className="w-16 h-16 border rounded-full" alt="health" />
+          <img
+            src="/images/health.png"
+            className="w-16 h-16 border rounded-full"
+            alt="health"
+          />
           <p>{food.health}</p>
         </span>
         <span>
-          <img className="w-16 h-16 border rounded-full" alt="hunger" />
+          <img
+            src="/images/hunger.png"
+            className="w-16 h-16 border rounded-full"
+            alt="hunger"
+          />
           <p>{food.hunger}</p>
         </span>
         <span>
-          <img className="w-16 h-16 border rounded-full" alt="sanity" />
+          <img
+            src="/images/sanity.png"
+            className="w-16 h-16 border rounded-full"
+            alt="sanity"
+          />
           <p>{food.sanity}</p>
         </span>
-        <span>
-          <img className="w-16 h-16 border rounded-full" alt="perishtime" />
-          <p>{food.perishtime}</p>
-        </span>
+        {food.perishtime && (
+          <span>
+            <img
+              src="/images/perishtime.png"
+              className="w-16 h-16 border rounded-full"
+              alt="perishtime"
+            />
+            <p>{food.perishtime}</p>
+          </span>
+        )}
       </div>
-      <div className="flex mt-5 justify-between w-40">
+      <div className="flex mt-5 justify-between w-40 items-center">
         <span>
-          <img className="w-16 h-16 border rounded-full" alt="cooktime" />
+          <img
+            src="/images/cooktime.png"
+            className="w-16 h-16 border rounded-full"
+            alt="cooktime"
+          />
           <p>{food.cooktime}</p>
         </span>
-        <span>
-          <img className="w-16 h-16 border rounded-full" alt="foodtype" />
-          <p>{t("ui." + food.foodtype)}</p>
-        </span>
+        {food.foodtype && (
+          <span className="flex flex-col items-center">
+            <img
+              src="/images/foodtype.png"
+              className="w-16 h-16 border rounded-full"
+              alt="foodtype"
+            />
+            <p>{t("ui." + food.foodtype)}</p>
+          </span>
+        )}
       </div>
     </div>
   );

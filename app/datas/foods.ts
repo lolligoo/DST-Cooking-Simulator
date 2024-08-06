@@ -402,7 +402,7 @@ const foods: { [key: string]: Food } = {
       return true;
     },
     priority: -10,
-    foodtype: "meat",
+    foodtype: "",
     health: 0,
     hunger: 0,
     perishtime: 6,
@@ -1513,18 +1513,19 @@ export const getFoods = (pot: string, recipes: string[]) => {
 const phaseTags = (names: string[]) => {
   let tags: { [key: string]: number } = {};
   names.map((n) => {
-    if (n !== "meat" && n !== "fish") {
-      if (tags[n]) {
-        tags[n] += 1;
+    let k = n.replace("_cooked", "").replace("_dried", "");
+    if (k !== "meat" && k !== "fish") {
+      if (tags[k]) {
+        tags[k] += 1;
       } else {
-        tags[n] = 1;
+        tags[k] = 1;
       }
     }
-    Object.keys(ingredients[n].values).map((e) => {
+    Object.keys(ingredients[k].values).map((e) => {
       if (tags[e]) {
-        tags[e] += ingredients[n].values[e];
+        tags[e] += ingredients[k].values[e];
       } else {
-        tags[e] = ingredients[n].values[e];
+        tags[e] = ingredients[k].values[e];
       }
     });
   });

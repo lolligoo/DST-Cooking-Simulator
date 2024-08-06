@@ -12,9 +12,9 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   let { t } = useTranslation();
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex justify-center w-full flex-col">
       <h1 className="text-3xl">{t("ui.title")}</h1>
-      <p></p>
+      <p className="mt-8">WIP</p>
       <p></p>
       <p></p>
     </div>

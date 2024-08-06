@@ -21,7 +21,7 @@ export default function Foods() {
           onClick={() => {
             handleClick("all");
           }}
-          className="w-24 h-9 border rounded-md mb-2"
+          className="w-24 h-9 border rounded-md mb-2 text-center content-center"
         >
           {t("ui.all")}
         </p>
@@ -29,7 +29,7 @@ export default function Foods() {
           onClick={() => {
             handleClick("veggie");
           }}
-          className="h-9 border rounded-md mb-2"
+          className="h-9 border rounded-md mb-2 text-center content-center"
         >
           {t("ui.veggie")}
         </p>
@@ -37,7 +37,7 @@ export default function Foods() {
           onClick={() => {
             handleClick("meat");
           }}
-          className="h-9 border rounded-md mb-2"
+          className="h-9 border rounded-md mb-2 text-center content-center"
         >
           {t("ui.meat")}
         </p>
@@ -45,7 +45,7 @@ export default function Foods() {
           onClick={() => {
             handleClick("goodies");
           }}
-          className="h-9 border rounded-md mb-2"
+          className="h-9 border rounded-md mb-2 text-center content-center"
         >
           {t("ui.goodies")}
         </p>
@@ -53,7 +53,7 @@ export default function Foods() {
           onClick={() => {
             handleClick("roughage");
           }}
-          className="h-9 border rounded-md mb-2"
+          className="h-9 border rounded-md mb-2 text-center content-center"
         >
           {t("ui.roughage")}
         </p>
@@ -61,7 +61,7 @@ export default function Foods() {
           onClick={() => {
             handleClick("item");
           }}
-          className="h-9 border rounded-md mb-2"
+          className="h-9 border rounded-md mb-2 text-center content-center"
         >
           {t("ui.item")}
         </p>
@@ -69,7 +69,7 @@ export default function Foods() {
           onClick={() => {
             handleClick("elemental");
           }}
-          className="h-9 border rounded-md mb-2"
+          className="h-9 border rounded-md mb-2 text-center content-center"
         >
           {t("ui.elemental")}
         </p>
@@ -80,7 +80,7 @@ export default function Foods() {
             <NavLink key={key} to={`/food/${key}` + location.search}>
               <img
                 key={key}
-                //src={ingredients[key]}
+                src={`/images/${key}.png`}
                 className="w-16 h-16 border ml-2 mb-2"
                 alt={t("foods." + key)}
               />
