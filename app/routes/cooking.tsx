@@ -71,10 +71,30 @@ export default function Cooking() {
         </div>
         <div className="flex justify-start relative">
           <div className="flex">
-            <img alt="1" className="w-16 h-16 border mr-3" />
-            <img alt="2" className="w-16 h-16 border mr-3" />
-            <img alt="3" className="w-16 h-16 border mr-3" />
-            <img alt="4" className="w-16 h-16 border mr-3" />
+            <img
+              alt="1"
+              src={
+                pot == "cookpot"
+                  ? "/images/cookpot_slot.png"
+                  : "/images/portablecookpot_slot.png"
+              }
+              className="w-16 h-16 border mr-3"
+            />
+            <img alt="2" src={
+                pot == "cookpot"
+                  ? "/images/cookpot_slot.png"
+                  : "/images/portablecookpot_slot.png"
+              } className="w-16 h-16 border mr-3" />
+            <img alt="3" src={
+                pot == "cookpot"
+                  ? "/images/cookpot_slot.png"
+                  : "/images/portablecookpot_slot.png"
+              } className="w-16 h-16 border mr-3" />
+            <img alt="4" src={
+                pot == "cookpot"
+                  ? "/images/cookpot_slot.png"
+                  : "/images/portablecookpot_slot.png"
+              } className="w-16 h-16 border mr-3" />
           </div>
           <div className="flex top-0 left-0 absolute">
             {recipes &&

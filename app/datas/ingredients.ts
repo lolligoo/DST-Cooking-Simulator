@@ -174,7 +174,7 @@ const ingredients: Ingredient = {
     values: { meat: 0.5, fish: 0.5 },
   },
   oceanfish_small_5: {
-    values: { meat: 0.5, fish: 0.5 },
+    values: { veggie: 1, corn: 1 },
   },
   oceanfish_small_6: {
     values: { meat: 0.5, fish: 0.5 },
@@ -201,7 +201,7 @@ const ingredients: Ingredient = {
     values: { meat: 1, fish: 1 },
   },
   oceanfish_medium_5: {
-    values: { meat: 1, fish: 1 },
+    values: { veggie: 1, corn: 1 },
   },
   oceanfish_medium_6: {
     values: { meat: 1, fish: 1 },
@@ -224,7 +224,7 @@ const ingredients: Ingredient = {
     canDry: true,
   },
   mandrake: {
-    values: { veggie: 1, magic: 1 }
+    values: { veggie: 1, magic: 1 },
   },
   // egg: {
   //   values: { egg: 1 },

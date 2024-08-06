@@ -30,7 +30,7 @@ export default function Food() {
         <span className="flex flex-col items-center">
           <img
             src={food.pot ? `/images/${food.pot}.png` : "/images/cookpot.png"}
-            className="w-16 h-16 border rounded-full"
+            className="w-16 h-16 rounded-md"
             alt="cookpot"
           />
           <p>{food.pot ? t("ui." + food.pot) : t("ui.cookpot")}</p>
@@ -40,7 +40,7 @@ export default function Food() {
         <span>
           <img
             src="/images/health.png"
-            className="w-16 h-16 border rounded-full"
+            className="w-16 h-16 rounded-full"
             alt="health"
           />
           <p>{food.health}</p>
@@ -48,7 +48,7 @@ export default function Food() {
         <span>
           <img
             src="/images/hunger.png"
-            className="w-16 h-16 border rounded-full"
+            className="w-16 h-16 rounded-full"
             alt="hunger"
           />
           <p>{food.hunger}</p>
@@ -56,7 +56,7 @@ export default function Food() {
         <span>
           <img
             src="/images/sanity.png"
-            className="w-16 h-16 border rounded-full"
+            className="w-16 h-16 rounded-full"
             alt="sanity"
           />
           <p>{food.sanity}</p>
@@ -65,7 +65,7 @@ export default function Food() {
           <span>
             <img
               src="/images/perishtime.png"
-              className="w-16 h-16 border rounded-full"
+              className="w-16 h-16 rounded-full"
               alt="perishtime"
             />
             <p>{food.perishtime}</p>
@@ -76,7 +76,7 @@ export default function Food() {
         <span>
           <img
             src="/images/cooktime.png"
-            className="w-16 h-16 border rounded-full"
+            className="w-16 h-16 rounded-full"
             alt="cooktime"
           />
           <p>{food.cooktime}</p>
@@ -85,7 +85,7 @@ export default function Food() {
           <span className="flex flex-col items-center">
             <img
               src="/images/foodtype.png"
-              className="w-16 h-16 border rounded-full"
+              className="w-16 h-16 rounded-full"
               alt="foodtype"
             />
             <p>{t("ui." + food.foodtype)}</p>
