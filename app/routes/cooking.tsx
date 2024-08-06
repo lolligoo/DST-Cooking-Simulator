@@ -56,16 +56,18 @@ export default function Cooking() {
     <div className="w-full">
       <div className="flex flex-col md:flex-row">
         <div className="flex mb-3">
-          <img
+          {/* <img
             alt={t("ui.cookpot")}
             src="/images/cookpot.png"
             onClick={() => setPot("cookpot")}
             className="w-16 h-16 border mr-3"
-          />
+          /> */}
           <img
             alt={t("ui.portablecookpot")}
-            src="/images/portablecookpot.png"
-            onClick={() => setPot("portablecookpot")}
+            src={`/images/${pot}.png`}
+            onClick={() =>
+              pot == "cookpot" ? setPot("portablecookpot") : setPot("cookpot")
+            }
             className="w-16 h-16 border mr-10"
           />
         </div>
@@ -80,21 +82,33 @@ export default function Cooking() {
               }
               className="w-16 h-16 border mr-3"
             />
-            <img alt="2" src={
+            <img
+              alt="2"
+              src={
                 pot == "cookpot"
                   ? "/images/cookpot_slot.png"
                   : "/images/portablecookpot_slot.png"
-              } className="w-16 h-16 border mr-3" />
-            <img alt="3" src={
+              }
+              className="w-16 h-16 border mr-3"
+            />
+            <img
+              alt="3"
+              src={
                 pot == "cookpot"
                   ? "/images/cookpot_slot.png"
                   : "/images/portablecookpot_slot.png"
-              } className="w-16 h-16 border mr-3" />
-            <img alt="4" src={
+              }
+              className="w-16 h-16 border mr-3"
+            />
+            <img
+              alt="4"
+              src={
                 pot == "cookpot"
                   ? "/images/cookpot_slot.png"
                   : "/images/portablecookpot_slot.png"
-              } className="w-16 h-16 border mr-3" />
+              }
+              className="w-16 h-16 border mr-3"
+            />
           </div>
           <div className="flex top-0 left-0 absolute">
             {recipes &&
