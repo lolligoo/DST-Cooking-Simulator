@@ -402,7 +402,7 @@ const foods: { [key: string]: Food } = {
       return true;
     },
     priority: -10,
-    foodtype: "",
+    foodtype: "other",
     health: 0,
     hunger: 0,
     perishtime: 6,
@@ -1014,7 +1014,7 @@ const foods: { [key: string]: Food } = {
       return false;
     },
     priority: 1,
-    foodtype: "meat",
+    foodtype: "other",
     health: 3,
     hunger: 0,
     perishtime: 3,

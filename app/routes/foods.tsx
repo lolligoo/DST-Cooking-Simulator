@@ -25,6 +25,7 @@ export default function Foods() {
           "roughage",
           "item",
           "elemental",
+          "other",
         ].map((e) => (
           <p
             key={e}

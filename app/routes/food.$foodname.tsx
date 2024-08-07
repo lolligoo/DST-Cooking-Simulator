@@ -24,7 +24,7 @@ export default function Food() {
       <span className="flex w-80 h-80 bg-l bg-no-repeat bg-center items-center justify-center">
         <img src={`/images/cookbook_${foodname}.png`} className="w-60 h-60" />
       </span>
-      <p className="mt-5 text-2xl font-blod">{t("foods." + foodname)}</p>
+      <p className="mt-3 text-2xl font-blod">{t("foods." + foodname)}</p>
       <div className="flex mt-5 items-center ">
         <span className="flex flex-col items-center">
           <img
@@ -78,18 +78,16 @@ export default function Food() {
             className="w-16 h-16 rounded-full"
             alt="cooktime"
           />
-          <p>{food.cooktime}</p>
+          <p>{food.cooktime * 20}</p>
         </span>
-        {food.foodtype && (
-          <span className="flex flex-col items-center">
-            <img
-              src="/images/foodtype.png"
-              className="w-16 h-16 rounded-full"
-              alt="foodtype"
-            />
-            <p>{t("ui." + food.foodtype)}</p>
-          </span>
-        )}
+        <span className="flex flex-col items-center">
+          <img
+            src="/images/foodtype.png"
+            className="w-16 h-16 rounded-full"
+            alt="foodtype"
+          />
+          <p>{t("ui." + food.foodtype)}</p>
+        </span>
       </div>
     </div>
   );

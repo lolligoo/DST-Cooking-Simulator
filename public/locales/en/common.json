@@ -239,6 +239,7 @@
     "goodies": "Goodies",
     "roughage": "Roughage",
     "item": "Item",
-    "elemental": "Elemental"
+    "elemental": "Elemental",
+    "other": "Other"
   }
 }

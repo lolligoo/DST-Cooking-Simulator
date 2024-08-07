@@ -239,6 +239,7 @@
     "goodies": "甜食",
     "roughage": "饲料",
     "item": "物品",
-    "elemental": "元素"
+    "elemental": "元素",
+    "other": "其他"
   }
 }
