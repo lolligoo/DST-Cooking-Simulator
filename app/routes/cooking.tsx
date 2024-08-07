@@ -56,59 +56,29 @@ export default function Cooking() {
     <div className="w-full">
       <div className="flex flex-col md:flex-row">
         <div className="flex mb-3">
-          {/* <img
-            alt={t("ui.cookpot")}
-            src="/images/cookpot.png"
-            onClick={() => setPot("cookpot")}
-            className="w-16 h-16 border mr-3"
-          /> */}
           <img
             alt={t("ui.portablecookpot")}
             src={`/images/${pot}.png`}
             onClick={() =>
               pot == "cookpot" ? setPot("portablecookpot") : setPot("cookpot")
             }
-            className="w-16 h-16 border mr-10"
+            className="w-17 h-17 border mr-10"
           />
         </div>
         <div className="flex justify-start relative">
           <div className="flex">
-            <img
-              alt="1"
-              src={
-                pot == "cookpot"
-                  ? "/images/cookpot_slot.png"
-                  : "/images/portablecookpot_slot.png"
-              }
-              className="w-16 h-16 border mr-3"
-            />
-            <img
-              alt="2"
-              src={
-                pot == "cookpot"
-                  ? "/images/cookpot_slot.png"
-                  : "/images/portablecookpot_slot.png"
-              }
-              className="w-16 h-16 border mr-3"
-            />
-            <img
-              alt="3"
-              src={
-                pot == "cookpot"
-                  ? "/images/cookpot_slot.png"
-                  : "/images/portablecookpot_slot.png"
-              }
-              className="w-16 h-16 border mr-3"
-            />
-            <img
-              alt="4"
-              src={
-                pot == "cookpot"
-                  ? "/images/cookpot_slot.png"
-                  : "/images/portablecookpot_slot.png"
-              }
-              className="w-16 h-16 border mr-3"
-            />
+            {["1", "2", "3", "4"].map((e) => (
+              <img
+                key={e}
+                alt={e}
+                src={
+                  pot == "cookpot"
+                    ? "/images/cookpot_slot.png"
+                    : "/images/portablecookpot_slot.png"
+                }
+                className="w-17 h-17 border mr-3"
+              />
+            ))}
           </div>
           <div className="flex top-0 left-0 absolute">
             {recipes &&
@@ -116,7 +86,7 @@ export default function Cooking() {
                 <img
                   key={r + index}
                   src={`/images/${r}.png`}
-                  className="w-16 h-16 border mr-3"
+                  className="w-16 h-16 mr-4"
                   alt={r}
                   onClick={() => removeIngredient(index)}
                 />
@@ -126,120 +96,61 @@ export default function Cooking() {
         <div className="flex mt-5 md:mt-0 ml-0 md:ml-7">
           {foods &&
             foods.map((r, index) => (
-              <NavLink key={r} to={`/food/${r}` + location.search}>
-                <img
-                  key={r + index}
-                  src={`/images/${r}.png`}
-                  className="w-16 h-16 border mr-2"
-                  alt={r}
-                />
-              </NavLink>
+              <span key={r + index} className="flex w-17 h-17 items-center justify-center mr-2 bg-slot bg-no-repeat bg-center">
+                <NavLink key={r} to={`/food/${r}` + location.search}>
+                  <img
+                    
+                    src={`/images/${r}.png`}
+                    className="w-16 h-16"
+                    alt={r}
+                  />
+                </NavLink>
+              </span>
             ))}
         </div>
       </div>
       <div className="flex flex-row border-t border-blue-300 mt-5">
         <div className="flex flex-col justify-start border-r border-blue-300 mt-5 ">
-          <p
-            className="w-24 h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("all")}
-          >
-            {t("ui.all")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("fruit")}
-          >
-            {t("ui.fruit")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("monster")}
-          >
-            {t("ui.monster")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("sweetener")}
-          >
-            {t("ui.sweetener")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("veggie")}
-          >
-            {t("ui.veggie")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("meat")}
-          >
-            {t("ui.meat")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("fish")}
-          >
-            {t("ui.fish")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("frozen")}
-          >
-            {t("ui.frozen")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("magic")}
-          >
-            {t("ui.magic")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("egg")}
-          >
-            {t("ui.egg")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("decoration")}
-          >
-            {t("ui.decoration")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("fat")}
-          >
-            {t("ui.fat")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("dairy")}
-          >
-            {t("ui.dairy")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("inedible")}
-          >
-            {t("ui.inedible")}
-          </p>
-          <p
-            className="h-9 border rounded-md mb-2 text-center content-center"
-            onClick={() => handleClick("seed")}
-          >
-            {t("ui.seed")}
-          </p>
+          {[
+            "all",
+            "fruit",
+            "veggie",
+            "meat",
+            "fish",
+            "monster",
+            "sweetener",
+            "seed",
+            "frozen",
+            "magic",
+            "egg",
+            "decoration",
+            "fat",
+            "dairy",
+            "inedible",
+          ].map((e) => (
+            <p
+              key={e}
+              className="w-24 h-9 border rounded-md mb-2 text-center content-center"
+              onClick={() => handleClick(e)}
+            >
+              {t(`ui.${e}`)}
+            </p>
+          ))}
         </div>
         <div className="flex ml-5 mt-5 flex-wrap content-start overflow-auto max-h-132">
           {ingredients &&
-            Object.keys(ingredients).map((key) => (
-              <img
+            Object.keys(ingredients).map((key, i) => (
+              <span
                 key={key}
-                src={`/images/${key}.png`}
-                className="w-16 h-16 border ml-2 mb-2"
-                alt={t("ingredients." + key)}
-                onClick={() => addIngredient(key)}
-              />
+                className="flex w-17 h-17 items-center justify-center ml-2 mb-2 bg-slot bg-no-repeat bg-center"
+              >
+                <img
+                  src={`/images/${key}.png`}
+                  className="flex w-16 h-16"
+                  alt={t("ingredients." + key)}
+                  onClick={() => addIngredient(key)}
+                />
+              </span>
             ))}
         </div>
       </div>

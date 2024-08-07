@@ -17,74 +17,41 @@ export default function Foods() {
   return (
     <div className="flex ">
       <div className="flex flex-col border-r">
-        <p
-          onClick={() => {
-            handleClick("all");
-          }}
-          className="w-24 h-9 border rounded-md mb-2 text-center content-center"
-        >
-          {t("ui.all")}
-        </p>
-        <p
-          onClick={() => {
-            handleClick("veggie");
-          }}
-          className="h-9 border rounded-md mb-2 text-center content-center"
-        >
-          {t("ui.veggie")}
-        </p>
-        <p
-          onClick={() => {
-            handleClick("meat");
-          }}
-          className="h-9 border rounded-md mb-2 text-center content-center"
-        >
-          {t("ui.meat")}
-        </p>
-        <p
-          onClick={() => {
-            handleClick("goodies");
-          }}
-          className="h-9 border rounded-md mb-2 text-center content-center"
-        >
-          {t("ui.goodies")}
-        </p>
-        <p
-          onClick={() => {
-            handleClick("roughage");
-          }}
-          className="h-9 border rounded-md mb-2 text-center content-center"
-        >
-          {t("ui.roughage")}
-        </p>
-        <p
-          onClick={() => {
-            handleClick("item");
-          }}
-          className="h-9 border rounded-md mb-2 text-center content-center"
-        >
-          {t("ui.item")}
-        </p>
-        <p
-          onClick={() => {
-            handleClick("elemental");
-          }}
-          className="h-9 border rounded-md mb-2 text-center content-center"
-        >
-          {t("ui.elemental")}
-        </p>
+        {[
+          "all",
+          "veggie",
+          "meat",
+          "goodies",
+          "roughage",
+          "item",
+          "elemental",
+        ].map((e) => (
+          <p
+            key={e}
+            onClick={() => {
+              handleClick(e);
+            }}
+            className="w-24 h-9 border rounded-md mb-2 text-center content-center"
+          >
+            {t(`ui.${e}`)}
+          </p>
+        ))}
       </div>
       <div className="flex ml-5 flex-wrap content-start max-h-132 overflow-y-auto">
         {foodNames &&
           foodNames.map((key) => (
-            <NavLink key={key} to={`/food/${key}` + location.search}>
-              <img
-                key={key}
-                src={`/images/${key}.png`}
-                className="w-16 h-16 border ml-2 mb-2"
-                alt={t("foods." + key)}
-              />
-            </NavLink>
+            <span
+              key={key}
+              className="flex w-17 h-17 items-center justify-center ml-2 mb-2 bg-slot bg-no-repeat bg-center"
+            >
+              <NavLink to={`/food/${key}` + location.search}>
+                <img
+                  src={`/images/${key}.png`}
+                  className="w-16 h-16"
+                  alt={t("foods." + key)}
+                />
+              </NavLink>
+            </span>
           ))}
       </div>
     </div>
