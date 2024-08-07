@@ -1023,7 +1023,7 @@ const foods: { [key: string]: Food } = {
   },
   koalefig_trunk: {
     test: (tags) => {
-      if (tags.trunk && tags.fig) {
+      if ((tags.trunk || tags.trunk_summer || tags.trunk_winter) && tags.fig) {
         return true;
       }
       return false;
