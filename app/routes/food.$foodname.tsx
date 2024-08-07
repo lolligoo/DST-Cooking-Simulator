@@ -30,64 +30,32 @@ export default function Food() {
           <img
             src={food.pot ? `/images/${food.pot}.png` : "/images/cookpot.png"}
             className="w-16 h-16 rounded-md"
-            alt="cookpot"
+            alt={food.pot ? food.pot : "cookpot"}
           />
-          <p>{food.pot ? t("ui." + food.pot) : t("ui.cookpot")}</p>
+          {/* <p>{food.pot ? t("ui." + food.pot) : t("ui.cookpot")}</p> */}
         </span>
       </div>
       <div className="flex mt-5 justify-between w-80">
-        <span>
-          <img
-            src="/images/health.png"
-            className="w-16 h-16 rounded-full"
-            alt="health"
-          />
-          <p>{food.health}</p>
-        </span>
-        <span>
-          <img
-            src="/images/hunger.png"
-            className="w-16 h-16 rounded-full"
-            alt="hunger"
-          />
-          <p>{food.hunger}</p>
-        </span>
-        <span>
-          <img
-            src="/images/sanity.png"
-            className="w-16 h-16 rounded-full"
-            alt="sanity"
-          />
-          <p>{food.sanity}</p>
-        </span>
-        {food.perishtime && (
-          <span>
-            <img
-              src="/images/perishtime.png"
-              className="w-16 h-16 rounded-full"
-              alt="perishtime"
-            />
-            <p>{food.perishtime}</p>
-          </span>
-        )}
+        <p className="w-16 h-16 rounded-full bg-health bg-cover content-center font-m text-lg text-slate-50">
+          {food.health}
+        </p>
+        <p className="w-16 h-16 rounded-full bg-hunger bg-cover content-center font-m text-lg text-slate-50">
+          {food.hunger}
+        </p>
+        <p className="w-16 h-16 rounded-full bg-sanity bg-cover content-center font-m text-lg text-slate-50">
+          {food.sanity}
+        </p>
+        <p className="w-16 h-16 rounded-full bg-perishtime bg-cover content-center font-m text-lg text-slate-50">
+          {food.perishtime + t("ui.days")}
+        </p>
       </div>
       <div className="flex mt-5 justify-between w-40 items-center">
-        <span>
-          <img
-            src="/images/cooktime.png"
-            className="w-16 h-16 rounded-full"
-            alt="cooktime"
-          />
-          <p>{food.cooktime * 20}</p>
-        </span>
-        <span className="flex flex-col items-center">
-          <img
-            src="/images/foodtype.png"
-            className="w-16 h-16 rounded-full"
-            alt="foodtype"
-          />
-          <p>{t("ui." + food.foodtype)}</p>
-        </span>
+        <p className="w-16 h-16 rounded-full bg-cooktime bg-cover content-center font-m text-lg text-slate-50">
+          {food.cooktime * 20 + t("ui.s")}
+        </p>
+        <p className="w-16 h-16 rounded-full bg-foodtype bg-cover content-center font-m text-lg text-slate-50">
+          {t("ui." + food.foodtype)}
+        </p>
       </div>
     </div>
   );

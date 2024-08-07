@@ -46,7 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="flex justify-center h-full ">
+      <body className="flex justify-center h-full bg-gradient-to-bl">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -61,7 +61,7 @@ export default function App() {
   const [show, setShow] = useState<boolean>(false);
   let { t } = useTranslation();
   return (
-    <div className="font-sans p-4 flex flex-col items-center w-full xl:w-3/5 max-h-screen">
+    <div className="font-sans p-4 flex flex-col items-center w-full xl:w-3/5 max-h-screen bg-gradient-to-bl">
       <div className="top-0 w-full h-fit rounded-rm border-b border-red-400 flex justify-between">
         <h1 className="text-xl mt-0">
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>

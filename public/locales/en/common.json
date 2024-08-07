@@ -240,6 +240,9 @@
     "roughage": "Roughage",
     "item": "Item",
     "elemental": "Elemental",
-    "other": "Other"
+    "other": "Other",
+    "s": "s",
+    "days": " days"
+
   }
 }

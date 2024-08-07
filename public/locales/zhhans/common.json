@@ -240,6 +240,8 @@
     "roughage": "饲料",
     "item": "物品",
     "elemental": "元素",
-    "other": "其他"
+    "other": "其他",
+    "s": "秒",
+    "days": "天"
   }
 }
