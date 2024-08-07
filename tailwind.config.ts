@@ -6,6 +6,7 @@ export default {
     extend: {
       maxHeight: {
         "128": "32rem",
+        "130": "40rem",
         "132": "48rem",
       },
       height: {
