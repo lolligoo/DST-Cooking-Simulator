@@ -83,7 +83,7 @@ export default function App() {
           </h1>
         </div>
       </div>
-      <div className="flex w-full mt-8 text-center content-center max-h-128">
+      <div className="flex w-full mt-8 text-center content-center">
         <Outlet />
       </div>
       <div className="w-20 flex flex-col fixed bottom-8 left-4 justify-center items-center">

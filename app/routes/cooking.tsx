@@ -53,7 +53,7 @@ export default function Cooking() {
     setFoods(getFoods(pot, recipes));
   }, [pot, recipes]);
   return (
-    <div className="w-full">
+    <div className="w-full max-h-128">
       <div className="flex flex-col md:flex-row">
         <div className="flex mb-3">
           <img
