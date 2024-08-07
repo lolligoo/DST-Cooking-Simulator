@@ -16,9 +16,6 @@ export default {
         "17": "70px",
         "65": "260px",
       },
-      marginRight: {
-        "45": "18px",
-      },
       backgroundImage: {
         slot: "url('/images/inv_slot.png')",
         l: "url('/images/bg.jpg')",
@@ -29,6 +26,7 @@ export default {
         cooktime: "url('/images/cooktime.png')",
         foodtype: "url('/images/foodtype.png')",
         button: "url('/images/button_large.png')",
+        book: "url('/images/tab_book.png')",
       },
       fontWeight: {
         m: "520",

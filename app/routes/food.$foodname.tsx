@@ -21,11 +21,11 @@ export default function Food() {
   const { t } = useTranslation();
   return (
     <div className="flex flex-col w-full items-center ">
+      <h1 className="mt-3 text-2xl font-blod">{t("foods." + foodname)}</h1>
       <span className="flex w-80 h-80 bg-l bg-no-repeat bg-center items-center justify-center">
         <img src={`/images/cookbook_${foodname}.png`} className="w-60 h-60" />
       </span>
-      <p className="mt-3 text-2xl font-blod">{t("foods." + foodname)}</p>
-      <div className="flex mt-5 items-center ">
+      <div className="flex items-center ">
         <span className="flex flex-col items-center">
           <img
             src={food.pot ? `/images/${food.pot}.png` : "/images/cookpot.png"}

@@ -54,7 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="flex justify-center h-full bg-gradient-to-bl">
+      <body className="flex justify-center h-full bg-slate-300">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -69,9 +69,9 @@ export default function App() {
   const [show, setShow] = useState<boolean>(false);
   let { t } = useTranslation();
   return (
-    <div className="font-sans p-4 flex flex-col items-center w-full xl:w-3/5 max-h-screen bg-gradient-to-bl">
-      <div className="top-0 w-full h-fit rounded-rm border-b border-red-400 flex justify-between">
-        <h1 className="text-xl mt-0">
+    <div className="font-sans p-4 flex flex-col items-center w-full xl:w-3/5 max-h-screen">
+      <div className="top-0 w-full h-8 rounded-rm flex justify-between">
+        <h1 className="font-medium content-center text-center">
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>
         </h1>
         <div className="flex ">
@@ -83,14 +83,14 @@ export default function App() {
           </h1>
         </div>
       </div>
-      <div className="flex w-full ml-0 mt-5 text-center content-center">
+      <div className="flex w-full mt-8 text-center content-center">
         <Outlet />
       </div>
-      <div className=" flex flex-col fixed bottom-8 right-8 justify-end items-center">
+      <div className="w-20 flex flex-col fixed bottom-8 right-8 justify-center items-center">
         {show && (
-          <div className="bg-white flex flex-col justify-center ">
+          <span className="flex flex-col ">
             <p
-              className="w-18 h-8 rounded-full border mb-2 text-center content-center"
+              className="w-20 h-8 mb-2 bg-button bg-cover bg-no-repeat text-center content-center"
               onClick={() => {
                 setShow(false);
                 navigate("?lng=en");
@@ -99,7 +99,7 @@ export default function App() {
               English
             </p>
             <p
-              className="w-18 h-8 rounded-full border mb-2 text-center content-center"
+              className="w-20 h-8 mb-2 bg-button bg-cover bg-no-repeat text-center content-center"
               onClick={() => {
                 setShow(false);
                 navigate("?lng=zhhans");
@@ -107,13 +107,13 @@ export default function App() {
             >
               简体中文
             </p>
-          </div>
+          </span>
         )}
         <p
-          onMouseEnter={() => {
+          onClick={() => {
             setShow(!show);
           }}
-          className="w-12 h-12 rounded-full border border-purple-950 text-center content-center"
+          className="w-12 h-12 rounded-full bg-book text-center content-center bg-cover"
         ></p>
       </div>
     </div>
