@@ -20,7 +20,7 @@ export default function Food() {
   const { foodname, food } = useLoaderData<typeof loader>();
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col w-full items-center max-h-132">
+    <div className="flex flex-col w-full items-center max-h-130">
       <h1 className="mt-3 text-2xl font-blod">{t("foods." + foodname)}</h1>
       <span className="flex w-80 h-80 bg-l bg-no-repeat bg-center items-center justify-center">
         <img src={`/images/cookbook_${foodname}.png`} className="w-60 h-60" />
