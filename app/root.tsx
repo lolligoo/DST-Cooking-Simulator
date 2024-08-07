@@ -83,14 +83,14 @@ export default function App() {
           </h1>
         </div>
       </div>
-      <div className="flex w-full mt-8 text-center content-center">
+      <div className="flex w-full mt-8 text-center content-center max-h-128">
         <Outlet />
       </div>
-      <div className="w-20 flex flex-col fixed bottom-8 right-8 justify-center items-center">
+      <div className="w-20 flex flex-col fixed bottom-8 left-4 justify-center items-center">
         {show && (
           <span className="flex flex-col ">
             <p
-              className="w-20 h-8 mb-2 bg-button bg-cover bg-no-repeat text-center content-center"
+              className="w-20 h-8 mb-2 bg-button bg-cover bg-no-repeat text-center content-center font-medium"
               onClick={() => {
                 setShow(false);
                 navigate("?lng=en");
@@ -99,7 +99,7 @@ export default function App() {
               English
             </p>
             <p
-              className="w-20 h-8 mb-2 bg-button bg-cover bg-no-repeat text-center content-center"
+              className="w-20 h-8 mb-2 bg-button bg-cover bg-no-repeat text-center content-center font-medium"
               onClick={() => {
                 setShow(false);
                 navigate("?lng=zhhans");
