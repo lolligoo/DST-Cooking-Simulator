@@ -1,11 +1,12 @@
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { NavLink, useLoaderData, useLocation } from "@remix-run/react";
 import type { LoaderFunctionArgs } from "@remix-run/node";
 import foods from "~/datas/foods";
 import { useTranslation } from "react-i18next";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const foodname = params.foodname;
+  
   if (!foodname) {
     throw new Response("Not Found", { status: 404 });
   }
@@ -17,6 +18,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 };
 
 export default function Food() {
+  const location = useLocation();
   const { foodname, food } = useLoaderData<typeof loader>();
   const { t } = useTranslation();
   return (
@@ -27,11 +29,19 @@ export default function Food() {
       </span>
       <div className="flex items-center ">
         <span className="flex flex-col items-center">
-          <img
-            src={food.pot ? `/images/${food.pot}.png` : "/images/cookpot.png"}
-            className="w-16 h-16 rounded-md"
-            alt={food.pot ? food.pot : "cookpot"}
-          />
+          <NavLink
+            to={
+              food.recipes
+                ? `/cooking${location.search}&pot=${food.pot}&recipes=${food.recipes.concat()}`
+                : "/"
+            }
+          >
+            <img
+              src={food.pot ? `/images/${food.pot}.png` : "/images/cookpot.png"}
+              className="w-16 h-16 rounded-md"
+              alt={food.pot ? food.pot : "cookpot"}
+            />
+          </NavLink>
         </span>
       </div>
       <div className="flex mt-5 justify-between w-80">

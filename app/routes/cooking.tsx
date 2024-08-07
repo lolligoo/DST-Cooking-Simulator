@@ -107,8 +107,8 @@ export default function Cooking() {
             ))}
         </div>
       </div>
-      <div className="flex flex-row border-t border-blue-300 mt-5">
-        <div className="flex flex-col justify-start border-r border-blue-300 mt-5 ">
+      <div className="flex flex-row mt-5 overflow-y-auto">
+        <div className="w-28 h-full flex flex-col justify-start mt-5 ">
           {[
             "all",
             "fruit",
@@ -128,14 +128,14 @@ export default function Cooking() {
           ].map((e) => (
             <p
               key={e}
-              className="w-24 h-9 rounded-md mb-2 bg-button bg-cover bg-no-repeat text-center content-center font-medium"
+              className="w-24 h-9 rounded-md mb-1 bg-button bg-cover bg-no-repeat text-center content-center font-medium"
               onClick={() => handleClick(e)}
             >
               {t(`ui.${e}`)}
             </p>
           ))}
         </div>
-        <div className="flex ml-5 mt-5 flex-wrap content-start overflow-auto max-h-132">
+        <div className="flex ml-5 mt-5 flex-wrap overflow-y-auto max-h-128">
           {ingredients &&
             Object.keys(ingredients).map((key, i) => (
               <span
