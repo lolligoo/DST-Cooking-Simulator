@@ -86,7 +86,7 @@ export default function Cooking() {
                 <img
                   key={r + index}
                   src={`/images/${r}.png`}
-                  className="w-16 h-16 mr-4"
+                  className="w-16 h-16 mr-5"
                   alt={r}
                   onClick={() => removeIngredient(index)}
                 />
@@ -96,7 +96,7 @@ export default function Cooking() {
         <div className="flex mt-5 md:mt-0 ml-0 md:ml-7">
           {foods &&
             foods.map((r, index) => (
-              <span key={r + index} className="flex w-17 h-17 items-center justify-center mr-2 bg-slot bg-contain bg-no-repeat">
+              <span key={r + index} className="flex w-17 h-17 items-center justify-center mr-2 bg-slot bg-no-repeat bg-center">
                 <NavLink key={r} to={`/food/${r}` + location.search}>
                   <img
                     src={`/images/${r}.png`}
@@ -129,7 +129,7 @@ export default function Cooking() {
           ].map((e) => (
             <p
               key={e}
-              className="w-24 h-9 border rounded-md mb-2 text-center content-center"
+              className="w-24 h-9 border rounded-md mb-2 bg-button bg-cover bg-no-repeat text-center content-center font-medium"
               onClick={() => handleClick(e)}
             >
               {t(`ui.${e}`)}

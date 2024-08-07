@@ -12,7 +12,7 @@ import "./tailwind.css";
 import { useChangeLanguage } from "remix-i18next/react";
 import { useTranslation } from "react-i18next";
 import i18next from "./i18next.server";
-import type { LoaderFunctionArgs } from "@remix-run/node";
+import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useState } from "react";
 
@@ -26,6 +26,14 @@ export let handle = {
   // TIP: In most cases, you should set this to your defaultNS from your i18n config
   // or if you did not set one, set it to the i18next default namespace "translation"
   i18n: "common",
+};
+
+export const meta: MetaFunction = () => {
+  let { t } = useTranslation();
+  return [
+    { title: t("ui.title") },
+    { name: "description", content: "Welcome to DST Cooking Simulator" },
+  ];
 };
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -67,10 +75,10 @@ export default function App() {
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>
         </h1>
         <div className="flex ">
-          <h1 className="mt-0 h-6">
+          <h1 className="w-20 bg-button bg-cover bg-no-repeat content-center text-center font-medium">
             <NavLink to={"cooking?lng=" + locale}>{t("ui.cooking")}</NavLink>
           </h1>
-          <h1 className="mt-0 ml-3 h-6">
+          <h1 className="w-20 bg-button bg-cover bg-no-repeat content-center text-center font-medium">
             <NavLink to={"foods?lng=" + locale}>{t("ui.foods")}</NavLink>
           </h1>
         </div>

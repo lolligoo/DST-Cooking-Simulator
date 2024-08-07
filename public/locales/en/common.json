@@ -218,7 +218,7 @@
   "ui": {
     "title": "DST Cooking Simulator",
     "cooking": "Cooking",
-    "foods": "Foods",
+    "foods": "Meals",
     "cookpot": "Cook Pot",
     "portablecookpot": "Portable Cook Pot",
     "all": "All",
@@ -242,7 +242,7 @@
     "elemental": "Elemental",
     "other": "Other",
     "s": "s",
-    "days": " days"
-
+    "days": " days",
+    "forever": "Forever"
   }
 }

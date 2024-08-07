@@ -32,7 +32,7 @@ export default function Foods() {
             onClick={() => {
               handleClick(e);
             }}
-            className="w-24 h-9 border rounded-md mb-2 text-center content-center"
+            className="w-24 h-9 border rounded-md mb-2 bg-button bg-cover bg-no-repeat text-center content-center font-medium"
           >
             {t(`ui.${e}`)}
           </p>

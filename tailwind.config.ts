@@ -28,6 +28,7 @@ export default {
         perishtime: "url('/images/perishtime.png')",
         cooktime: "url('/images/cooktime.png')",
         foodtype: "url('/images/foodtype.png')",
+        button: "url('/images/button_large.png')",
       },
       fontWeight: {
         m: "520",

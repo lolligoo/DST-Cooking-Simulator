@@ -216,7 +216,7 @@
     "moqueca": "海鲜杂烩"
   },
   "ui": {
-    "title": "DST 做菜模拟器",
+    "title": "DST 烹饪模拟器",
     "cooking": "烹饪",
     "foods": "美食",
     "cookpot": "烹饪锅",
@@ -242,6 +242,7 @@
     "elemental": "元素",
     "other": "其他",
     "s": "秒",
-    "days": "天"
+    "days": "天",
+    "forever": "永远"
   }
 }

@@ -32,7 +32,6 @@ export default function Food() {
             className="w-16 h-16 rounded-md"
             alt={food.pot ? food.pot : "cookpot"}
           />
-          {/* <p>{food.pot ? t("ui." + food.pot) : t("ui.cookpot")}</p> */}
         </span>
       </div>
       <div className="flex mt-5 justify-between w-80">
@@ -46,7 +45,7 @@ export default function Food() {
           {food.sanity}
         </p>
         <p className="w-16 h-16 rounded-full bg-perishtime bg-cover content-center font-m text-lg text-slate-50">
-          {food.perishtime + t("ui.days")}
+          {food.perishtime ? food.perishtime + t("ui.days") : t("ui.forever")}
         </p>
       </div>
       <div className="flex mt-5 justify-between w-40 items-center">
