@@ -108,7 +108,8 @@ export default function Cooking() {
         </div>
       </div>
       <div className="flex flex-col">
-          <span className="flex mt-4 justify-start overflow-auto w-fit">
+        <div className="flex overflow-auto">
+          <span className="flex mt-4 justify-start w-fit">
             {[
               "all",
               "fruit",
@@ -135,7 +136,8 @@ export default function Cooking() {
               </p>
             ))}
           </span>
-        <div className="flex mt-4 flex-wrap overflow-auto max-h-128 justify-center">
+        </div>
+        <div className="flex mt-4 flex-wrap overflow-auto max-h-96">
           {ingredients &&
             Object.keys(ingredients).map((key, i) => (
               <span
