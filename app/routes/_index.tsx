@@ -7,14 +7,14 @@ export default function Index() {
   let { t } = useTranslation();
   const location = useLocation();
   return (
-    <div className="flex justify-center w-full flex-col items-center">
+    <div className="flex justify-center w-full flex-col items-center mt-10 ">
       <h1 className="text-3xl">{t("ui.title")}</h1>
       <p className="mt-8">WIP</p>
       <div className="flex flex-col">
-        <h1 className="w-28 h-10 bg-button bg-cover bg-no-repeat content-center text-center font-medium mt-10">
+        <h1 className="w-28 h-12 bg-button bg-cover bg-no-repeat content-center text-center font-medium mt-10 text-xl">
           <NavLink to={"cooking?lng=" + location.search}>{t("ui.cooking")}</NavLink>
         </h1>
-        <h1 className="w-28 h-10 bg-button bg-cover bg-no-repeat content-center text-center font-medium mt-10">
+        <h1 className="w-28 h-12 bg-button bg-cover bg-no-repeat content-center text-center font-medium mt-10 text-xl">
           <NavLink to={"foods?lng=" + location.search}>{t("ui.foods")}</NavLink>
         </h1>
       </div>

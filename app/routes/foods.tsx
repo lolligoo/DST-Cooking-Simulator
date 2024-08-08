@@ -15,7 +15,7 @@ export default function Foods() {
     setFoodNames(searchFoods("all"));
   }, []);
   return (
-    <div className="flex max-h-full">
+    <div className="flex max-h-132">
       <div className="flex flex-col">
         {[
           "all",
@@ -32,7 +32,7 @@ export default function Foods() {
             onClick={() => {
               handleClick(e);
             }}
-            className="w-24 h-9 rounded-md mb-2 bg-button bg-cover bg-no-repeat text-center content-center font-medium"
+            className="w-24 h-10 rounded-md bg-button bg-cover bg-no-repeat text-center content-center font-medium"
           >
             {t(`ui.${e}`)}
           </p>
@@ -43,7 +43,7 @@ export default function Foods() {
           foodNames.map((key) => (
             <span
               key={key}
-              className="flex w-17 h-17 items-center justify-center ml-2 mb-2 bg-slot bg-no-repeat bg-center"
+              className="flex w-17 h-17 items-center justify-center ml-2 mb-2 bg-slot bg-no-repeat bg-contain"
             >
               <NavLink to={`/food/${key}` + location.search}>
                 <img

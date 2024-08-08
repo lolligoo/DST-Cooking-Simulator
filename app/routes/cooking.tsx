@@ -124,7 +124,7 @@ export default function Cooking() {
           ].map((e) => (
             <p
               key={e}
-              className="w-24 h-9 rounded-md mb-1 bg-button bg-cover bg-no-repeat text-center content-center font-medium"
+              className="w-24 h-10 rounded-md bg-button bg-cover bg-no-repeat text-center content-center font-medium"
               onClick={() => handleClick(e)}
             >
               {t(`ui.${e}`)}

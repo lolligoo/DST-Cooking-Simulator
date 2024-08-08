@@ -70,15 +70,15 @@ export default function App() {
   let { t } = useTranslation();
   return (
     <div className="font-sans p-4 flex flex-col items-center w-full xl:w-3/5 max-h-screen">
-      <div className="top-0 w-full h-8 rounded-rm flex justify-between">
+      <div className="top-0 w-full h-10 rounded-rm flex justify-between">
         <h1 className="font-medium content-center text-center">
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>
         </h1>
         <div className="flex ">
-          <h1 className="w-20 bg-button bg-cover bg-no-repeat content-center text-center font-medium">
+          <h1 className="w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium">
             <NavLink to={"cooking?lng=" + locale}>{t("ui.cooking")}</NavLink>
           </h1>
-          <h1 className="w-20 bg-button bg-cover bg-no-repeat content-center text-center font-medium">
+          <h1 className="w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium">
             <NavLink to={"foods?lng=" + locale}>{t("ui.foods")}</NavLink>
           </h1>
         </div>
