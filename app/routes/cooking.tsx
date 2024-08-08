@@ -92,14 +92,18 @@ export default function Cooking() {
         <div className="flex mt-3 md:mt-0 ml-0 md:ml-7">
           {foods &&
             foods.map((r, index) => (
-              <span
+              <div
                 key={r + index}
-                className="flex w-17 h-17 items-center justify-center mr-2 bg-slot bg-no-repeat bg-contain"
+                className="flex w-17 h-17 bg-slot bg-no-repeat bg-clip-border"
               >
                 <NavLink key={r} to={`/food/${r}` + location.search}>
-                  <img src={`/images/${r}.png`} className="w-16 h-16 mb-1" alt={r} />
+                  <img
+                    src={`/images/${r}.png`}
+                    className="w-16 h-16 mr-5"
+                    alt={r}
+                  />
                 </NavLink>
-              </span>
+              </div>
             ))}
         </div>
       </div>
@@ -136,11 +140,11 @@ export default function Cooking() {
             Object.keys(ingredients).map((key, i) => (
               <span
                 key={key}
-                className="flex w-17 h-17 items-center justify-center ml-1 mb-1 bg-slot bg-contain bg-no-repeat"
+                className="flex w-17 h-17 items-center justify-center bg-slot bg-no-repeat bg-clip-border"
               >
                 <img
                   src={`/images/${key}.png`}
-                  className="flex w-16 h-16 mb-1"
+                  className="flex w-16 h-16 mr-2"
                   alt={t("ingredients." + key)}
                   onClick={() => addIngredient(key)}
                 />

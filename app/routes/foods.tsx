@@ -43,12 +43,12 @@ export default function Foods() {
           foodNames.map((key) => (
             <span
               key={key}
-              className="flex w-17 h-17 items-center justify-center ml-2 mb-2 bg-slot bg-no-repeat bg-contain"
+              className="flex w-17 h-17 items-center justify-center bg-slot bg-no-repeat bg-clip-border"
             >
               <NavLink to={`/food/${key}` + location.search}>
                 <img
                   src={`/images/${key}.png`}
-                  className="w-16 h-16 mb-1"
+                  className="w-16 h-16 mr-2"
                   alt={t("foods." + key)}
                 />
               </NavLink>
