@@ -15,7 +15,7 @@ export default function Foods() {
     setFoodNames(searchFoods("all"));
   }, []);
   return (
-    <div className="flex max-h-132">
+    <div className="flex">
       <div className="flex flex-col">
         {[
           "all",
@@ -38,7 +38,7 @@ export default function Foods() {
           </p>
         ))}
       </div>
-      <div className="flex ml-5 flex-wrap content-start max-h-132 overflow-y-auto">
+      <div className="flex ml-5 flex-wrap content-start overflow-auto">
         {foodNames &&
           foodNames.map((key) => (
             <span

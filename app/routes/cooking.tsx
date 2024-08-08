@@ -53,7 +53,7 @@ export default function Cooking() {
     setFoods(getFoods(pot, recipes));
   }, [pot, recipes]);
   return (
-    <div className="w-full max-h-128">
+    <div className="w-full">
       <div className="flex flex-col md:flex-row">
         <div className="flex mb-3">
           <img
@@ -107,35 +107,35 @@ export default function Cooking() {
             ))}
         </div>
       </div>
-      <div className="flex flex-row overflow-y-auto">
-        <div className="w-28 h-full flex flex-col justify-start mt-4 ">
-          {[
-            "all",
-            "fruit",
-            "veggie",
-            "meat",
-            "fish",
-            "monster",
-            "sweetener",
-            "seed",
-            "frozen",
-            "magic",
-            "egg",
-            "decoration",
-            "fat",
-            "dairy",
-            "inedible",
-          ].map((e) => (
-            <p
-              key={e}
-              className="w-24 h-10 rounded-md bg-button bg-cover bg-no-repeat text-center content-center font-medium"
-              onClick={() => handleClick(e)}
-            >
-              {t(`ui.${e}`)}
-            </p>
-          ))}
-        </div>
-        <div className="flex ml-5 mt-4 flex-wrap overflow-y-auto max-h-128 content-start">
+      <div className="flex flex-col">
+          <span className="flex mt-4 justify-start overflow-auto w-fit">
+            {[
+              "all",
+              "fruit",
+              "veggie",
+              "meat",
+              "fish",
+              "monster",
+              "sweetener",
+              "seed",
+              "frozen",
+              "magic",
+              "egg",
+              "decoration",
+              "fat",
+              "dairy",
+              "inedible",
+            ].map((e) => (
+              <p
+                key={e}
+                className="w-24 h-10 rounded-md bg-button bg-cover bg-no-repeat text-center content-center font-medium"
+                onClick={() => handleClick(e)}
+              >
+                {t(`ui.${e}`)}
+              </p>
+            ))}
+          </span>
+        <div className="flex mt-4 flex-wrap overflow-auto max-h-128 justify-center">
           {ingredients &&
             Object.keys(ingredients).map((key, i) => (
               <span
