@@ -135,7 +135,7 @@ export default function Cooking() {
             </p>
           ))}
         </div>
-        <div className="flex ml-5 mt-5 flex-wrap overflow-y-auto max-h-128">
+        <div className="flex ml-5 mt-5 flex-wrap overflow-y-auto max-h-128 content-start">
           {ingredients &&
             Object.keys(ingredients).map((key, i) => (
               <span

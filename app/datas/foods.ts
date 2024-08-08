@@ -8,7 +8,7 @@ interface Food {
   perishtime: number;
   sanity: number;
   cooktime: number;
-  recipes?:string[];
+  recipes?: string[];
   pot?: string;
 }
 const foods: { [key: string]: Food } = {
@@ -31,8 +31,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 2,
-    recipes:['butterflywings','kelp','twigs','twigs'],
-    pot:'cookpot'
+    recipes: ["butterflywings", "kelp", "twigs", "twigs"],
+    pot: "cookpot",
   },
   frogglebunwich: {
     test: (tags) => {
@@ -48,8 +48,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 2,
-    recipes:['froglegs','kelp','twigs','twigs'],
-    pot:'cookpot'
+    recipes: ["froglegs", "kelp", "twigs", "twigs"],
+    pot: "cookpot",
   },
   taffy: {
     test: (tags) => {
@@ -65,8 +65,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 15,
     cooktime: 2,
-    recipes:['honey','honey','honey','twigs'],
-    pot:'cookpot'
+    recipes: ["honey", "honey", "honey", "twigs"],
+    pot: "cookpot",
   },
   pumpkincookie: {
     test: (tags) => {
@@ -82,8 +82,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 15,
     cooktime: 2,
-    recipes:['pumpkin','honey','honey','twigs'],
-    pot:'cookpot'
+    recipes: ["pumpkin", "honey", "honey", "twigs"],
+    pot: "cookpot",
   },
   stuffedeggplant: {
     test: (tags) => {
@@ -99,8 +99,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 2,
-    recipes:['eggplant','kelp','twigs','twigs'],
-    pot:'cookpot'
+    recipes: ["eggplant", "kelp", "twigs", "twigs"],
+    pot: "cookpot",
   },
   fishsticks: {
     test: (tags) => {
@@ -116,8 +116,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 5,
     cooktime: 2,
-    recipes:['pondfish','twigs','kelp','kelp'],
-    pot:'cookpot'
+    recipes: ["pondfish", "twigs", "kelp", "kelp"],
+    pot: "cookpot",
   },
   honeynuggets: {
     test: (tags) => {
@@ -133,8 +133,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 2,
-    recipes:['honey','smallmeat','smallmeat','smallmeat'],
-    pot:'cookpot'
+    recipes: ["honey", "smallmeat", "smallmeat", "smallmeat"],
+    pot: "cookpot",
   },
   honeyham: {
     test: (tags) => {
@@ -150,8 +150,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 2,
-    recipes:['honey','meat','smallmeat','smallmeat'],
-    pot:'cookpot'
+    recipes: ["honey", "meat", "smallmeat", "smallmeat"],
+    pot: "cookpot",
   },
   dragonpie: {
     test: (tags) => {
@@ -167,8 +167,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 2,
-    recipes:['dragonfruit','twigs','twigs','twigs'],
-    pot:'cookpot'
+    recipes: ["dragonfruit", "twigs", "twigs", "twigs"],
+    pot: "cookpot",
   },
   kabobs: {
     test: (tags) => {
@@ -190,8 +190,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 2,
-    recipes:['twigs','smallmeat','kelp','kelp'],
-    pot:'cookpot'
+    recipes: ["twigs", "smallmeat", "kelp", "kelp"],
+    pot: "cookpot",
   },
   mandrakesoup: {
     test: (tags) => {
@@ -207,8 +207,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 5,
     cooktime: 3,
-    recipes:['mandrake','twigs','twigs','twigs'],
-    pot:'cookpot'
+    recipes: ["mandrake", "twigs", "twigs", "twigs"],
+    pot: "cookpot",
   },
   baconeggs: {
     test: (tags) => {
@@ -230,8 +230,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 20,
     sanity: 5,
     cooktime: 2,
-    recipes:['egg','egg','meat','smallmeat'],
-    pot:'cookpot'
+    recipes: ["egg", "egg", "meat", "smallmeat"],
+    pot: "cookpot",
   },
   meatballs: {
     test: (tags) => {
@@ -247,8 +247,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 5,
     cooktime: 0.75,
-    recipes:['meat','kelp','kelp','kelp'],
-    pot:'cookpot'
+    recipes: ["meat", "kelp", "kelp", "kelp"],
+    pot: "cookpot",
   },
   bonestew: {
     test: (tags) => {
@@ -264,8 +264,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 5,
     cooktime: 0.75,
-    recipes:['meat','monstermeat','smallmeat','smallmeat'],
-    pot:'cookpot'
+    recipes: ["meat", "monstermeat", "smallmeat", "smallmeat"],
+    pot: "cookpot",
   },
   perogies: {
     test: (tags) => {
@@ -281,8 +281,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 20,
     sanity: 5,
     cooktime: 1,
-    recipes:['egg','smallmeat','kelp','kelp'],
-    pot:'cookpot'
+    recipes: ["egg", "smallmeat", "kelp", "kelp"],
+    pot: "cookpot",
   },
   turkeydinner: {
     test: (tags) => {
@@ -304,8 +304,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 5,
     cooktime: 3,
-    recipes:['drumstick','drumstick','smallmeat','kelp'],
-    pot:'cookpot'
+    recipes: ["drumstick", "drumstick", "smallmeat", "kelp"],
+    pot: "cookpot",
   },
   ratatouille: {
     test: (tags) => {
@@ -321,8 +321,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 1,
-    recipes:['kelp','kelp','kelp','kelp'],
-    pot:'cookpot'
+    recipes: ["kelp", "kelp", "kelp", "kelp"],
+    pot: "cookpot",
   },
   jammypreserves: {
     test: (tags) => {
@@ -338,8 +338,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 0.5,
-    recipes:['berries','berries','berries','berries'],
-    pot:'cookpot'
+    recipes: ["berries", "berries", "berries", "berries"],
+    pot: "cookpot",
   },
   fruitmedley: {
     test: (tags) => {
@@ -355,8 +355,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 5,
     cooktime: 0.5,
-    recipes:['pomegranate','pomegranate','pomegranate','twigs'],
-    pot:'cookpot'
+    recipes: ["pomegranate", "pomegranate", "pomegranate", "twigs"],
+    pot: "cookpot",
   },
   fishtacos: {
     test: (tags) => {
@@ -375,8 +375,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 5,
     cooktime: 0.5,
-    recipes:['pondfish','corn','twigs','twigs'],
-    pot:'cookpot'
+    recipes: ["pondfish", "corn", "twigs", "twigs"],
+    pot: "cookpot",
   },
   waffles: {
     test: (tags) => {
@@ -392,8 +392,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 5,
     cooktime: 0.5,
-    recipes:['butter','berries','egg','twigs'],
-    pot:'cookpot'
+    recipes: ["butter", "berries", "egg", "twigs"],
+    pot: "cookpot",
   },
   monsterlasagna: {
     test: (tags) => {
@@ -409,8 +409,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: -20,
     cooktime: 0.5,
-    recipes:['monstermeat','monstermeat','kelp','kelp'],
-    pot:'cookpot'
+    recipes: ["monstermeat", "monstermeat", "kelp", "kelp"],
+    pot: "cookpot",
   },
   powcake: {
     test: (tags) => {
@@ -426,8 +426,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 9000000,
     sanity: 0,
     cooktime: 0.5,
-    recipes:['twigs','honey','corn','twigs'],
-    pot:'cookpot'
+    recipes: ["twigs", "honey", "corn", "twigs"],
+    pot: "cookpot",
   },
   unagi: {
     test: (tags) => {
@@ -443,6 +443,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 5,
     cooktime: 0.5,
+    recipes: ["kelp", "eel", "twigs", "twigs"],
+    pot: "cookpot",
   },
   wetgoop: {
     test: (tags) => {
@@ -455,6 +457,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 0,
     cooktime: 0.25,
+    recipes: ["egg", "honey", "butter", "goatmilk"],
+    pot: "cookpot",
   },
   flowersalad: {
     test: (tags) => {
@@ -479,6 +483,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 5,
     cooktime: 0.5,
+    recipes: ["cactus_flower", "kelp", "kelp", "kelp"],
+    pot: "cookpot",
   },
   icecream: {
     test: (tags) => {
@@ -502,6 +508,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 3,
     sanity: 50,
     cooktime: 0.5,
+    recipes: ["ice", "goatmilk", "honey", "honey"],
+    pot: "cookpot",
   },
   watermelonicle: {
     test: (tags) => {
@@ -524,6 +532,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 3,
     sanity: 20,
     cooktime: 0.5,
+    recipes: ["ice", "watermelon", "twigs", "twigs"],
+    pot: "cookpot",
   },
   trailmix: {
     test: (tags) => {
@@ -550,6 +560,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 0.5,
+    recipes: ["acorn", "berries", "berries", "twigs"],
+    pot: "cookpot",
   },
   hotchili: {
     test: (tags) => {
@@ -565,6 +577,13 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 0,
     cooktime: 0.5,
+    recipes: [
+      "meat",
+      "meat",
+      "rock_avocado_fruit_ripe",
+      "rock_avocado_fruit_ripe",
+    ],
+    pot: "cookpot",
   },
   guacamole: {
     test: (tags) => {
@@ -584,6 +603,13 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 0,
     cooktime: 0.5,
+    recipes: [
+      "mole",
+      "twigs",
+      "rock_avocado_fruit_ripe",
+      "rock_avocado_fruit_ripe",
+    ],
+    pot: "cookpot",
   },
   jellybean: {
     test: (tags) => {
@@ -621,6 +647,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 15,
     cooktime: 0.75,
+    recipes: ["potato", "twigs", "twigs", "kelp"],
+    pot: "cookpot",
   },
   mashedpotatoes: {
     test: (tags) => {
@@ -642,6 +670,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 33,
     cooktime: 1,
+    recipes: ["potato", "potato", "garlic", "kelp"],
+    pot: "cookpot",
   },
   asparagussoup: {
     test: (tags) => {
@@ -663,6 +693,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 0.5,
+    recipes: ["asparagus", "kelp", "kelp", "kelp"],
+    pot: "cookpot",
   },
   vegstinger: {
     test: (tags) => {
@@ -686,6 +718,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 33,
     cooktime: 0.5,
+    recipes: ["tomato", "tomato", "kelp", "ice"],
+    pot: "cookpot",
   },
   bananapop: {
     test: (tags) => {
@@ -707,6 +741,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 3,
     sanity: 33,
     cooktime: 0.5,
+    recipes: ["cave_banana", "twigs", "kelp", "ice"],
+    pot: "cookpot",
   },
   frozenbananadaiquiri: {
     test: (tags) => {
@@ -728,6 +764,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 15,
     cooktime: 0.5,
+    recipes: ["cave_banana", "kelp", "kelp", "ice"],
+    pot: "cookpot",
   },
   bananajuice: {
     test: (tags) => {
@@ -749,6 +787,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 33,
     cooktime: 0.5,
+    recipes: ["cave_banana", "cave_banana", "twigs", "twigs"],
+    pot: "cookpot",
   },
   ceviche: {
     test: (tags) => {
@@ -770,6 +810,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 5,
     cooktime: 0.5,
+    recipes: ["fishmeat", "fishmeat", "ice", "kelp"],
+    pot: "cookpot",
   },
   salsa: {
     test: (tags) => {
@@ -791,6 +833,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 33,
     cooktime: 0.5,
+    recipes: ["tomato", "onion", "kelp", "kelp"],
+    pot: "cookpot",
   },
   pepperpopper: {
     test: (tags) => {
@@ -806,6 +850,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: -5,
     cooktime: 2,
+    recipes: ["pepper", "smallmeat", "smallmeat", "smallmeat"],
+    pot: "cookpot",
   },
   californiaroll: {
     test: (tags) => {
@@ -821,6 +867,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 10,
     cooktime: 0.5,
+    recipes: ["kelp", "kelp", "pondfish", "pondfish"],
+    pot: "cookpot",
   },
   seafoodgumbo: {
     test: (tags) => {
@@ -836,6 +884,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 20,
     cooktime: 1,
+    recipes: ["fishmeat", "fishmeat", "kelp", "kelp"],
+    pot: "cookpot",
   },
   surfnturf: {
     test: (tags) => {
@@ -857,6 +907,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 33,
     cooktime: 1,
+    recipes: ["meat", "pondfish", "pondfish", "pondfish"],
+    pot: "cookpot",
   },
   lobsterbisque: {
     test: (tags) => {
@@ -872,6 +924,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 10,
     cooktime: 0.5,
+    recipes: ["wobster_sheller_land", "ice", "twigs", "twigs"],
+    pot: "cookpot",
   },
   lobsterdinner: {
     test: (tags) => {
@@ -895,6 +949,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 50,
     cooktime: 1,
+    recipes: ["wobster_sheller_land", "kelp", "butter", "kelp"],
+    pot: "cookpot",
   },
   barnaclepita: {
     test: (tags) => {
@@ -910,6 +966,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 2,
+    recipes: ["barnacle", "kelp", "twigs", "twigs"],
+    pot: "cookpot",
   },
   barnaclesushi: {
     test: (tags) => {
@@ -925,6 +983,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 15,
     cooktime: 0.5,
+    recipes: ["barnacle", "kelp", "egg", "twigs"],
+    pot: "cookpot",
   },
   barnaclinguine: {
     test: (tags) => {
@@ -945,6 +1005,13 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 20,
     cooktime: 2,
+    recipes: [
+      "barnacle",
+      "barnacle",
+      "rock_avocado_fruit_ripe",
+      "rock_avocado_fruit_ripe",
+    ],
+    pot: "cookpot",
   },
   barnaclestuffedfishhead: {
     test: (tags) => {
@@ -960,6 +1027,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 3,
     sanity: 0,
     cooktime: 2,
+    recipes: ["barnacle", "fishmeat", "kelp", "kelp"],
+    pot: "cookpot",
   },
   leafloaf: {
     test: (tags) => {
@@ -975,6 +1044,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 20,
     sanity: 5,
     cooktime: 2,
+    recipes: ["plantmeat", "plantmeat", "kelp", "kelp"],
+    pot: "cookpot",
   },
   leafymeatburger: {
     test: (tags) => {
@@ -990,6 +1061,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 33,
     cooktime: 2,
+    recipes: ["plantmeat", "onion", "kelp", "kelp"],
+    pot: "cookpot",
   },
   leafymeatsouffle: {
     test: (tags) => {
@@ -1010,6 +1083,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 50,
     cooktime: 2,
+    recipes: ["plantmeat", "plantmeat", "honey", "honey"],
+    pot: "cookpot",
   },
   meatysalad: {
     test: (tags) => {
@@ -1025,6 +1100,13 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 5,
     cooktime: 2,
+    recipes: [
+      "plantmeat",
+      "rock_avocado_fruit_ripe",
+      "rock_avocado_fruit_ripe",
+      "rock_avocado_fruit_ripe",
+    ],
+    pot: "cookpot",
   },
   shroomcake: {
     test: (tags) => {
@@ -1040,6 +1122,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 10,
     cooktime: 1,
+    recipes: ["moon_cap", "red_cap", "blue_cap", "green_cap"],
+    pot: "cookpot",
   },
   sweettea: {
     test: (tags) => {
@@ -1067,6 +1151,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 3,
     sanity: 15,
     cooktime: 1,
+    recipes: ["forgetmelots", "ice", "honey", "honey"],
+    pot: "cookpot",
   },
   koalefig_trunk: {
     test: (tags) => {
@@ -1082,6 +1168,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 15,
     cooktime: 2,
+    recipes: ["trunk_winter", "fig", "twigs", "twigs"],
+    pot: "cookpot",
   },
   figatoni: {
     test: (tags) => {
@@ -1097,6 +1185,13 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 15,
     cooktime: 2,
+    recipes: [
+      "fig",
+      "rock_avocado_fruit_ripe",
+      "rock_avocado_fruit_ripe",
+      "twigs",
+    ],
+    pot: "cookpot",
   },
   figkabab: {
     test: (tags) => {
@@ -1118,6 +1213,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 10,
     cooktime: 1,
+    recipes: ["fig", "smallmeat", "smallmeat", "twigs"],
+    pot: "cookpot",
   },
   frognewton: {
     test: (tags) => {
@@ -1133,6 +1230,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 1,
+    recipes: ["fig", "froglegs", "twigs", "twigs"],
+    pot: "cookpot",
   },
   bunnystew: {
     test: (tags) => {
@@ -1154,6 +1253,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 5,
     cooktime: 1,
+    recipes: ["fig", "froglegs", "twigs", "twigs"],
+    pot: "cookpot",
   },
   justeggs: {
     test: (tags) => {
@@ -1169,6 +1270,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 5,
     cooktime: 0.5,
+    recipes: ["egg", "egg", "egg", "twigs"],
+    pot: "cookpot",
   },
   veggieomlet: {
     test: (tags) => {
@@ -1191,6 +1294,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 20,
     sanity: 5,
     cooktime: 1,
+    recipes: ["egg", "egg", "kelp", "kelp"],
+    pot: "cookpot",
   },
   talleggs: {
     test: (tags) => {
@@ -1206,6 +1311,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 5,
     cooktime: 2,
+    recipes: ["tallbirdegg", "kelp", "kelp", "twigs"],
+    pot: "cookpot",
   },
   beefalofeed: {
     test: (tags) => {
@@ -1230,6 +1337,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 20,
     sanity: 0,
     cooktime: 0.5,
+    recipes: ["twigs", "twigs", "twigs", "twigs"],
+    pot: "cookpot",
   },
   beefalotreat: {
     test: (tags) => {
@@ -1256,6 +1365,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 20,
     sanity: 0,
     cooktime: 2,
+    recipes: ["twigs", "twigs", "forgetmelots", "acorn"],
+    pot: "cookpot",
   },
   shroombait: {
     test: (tags) => {
@@ -1271,6 +1382,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: -15,
     cooktime: 2,
+    recipes: ["moon_cap", "moon_cap", "monstermeat", "twigs"],
+    pot: "cookpot",
   },
   batnosehat: {
     test: (tags) => {
@@ -1286,6 +1399,8 @@ const foods: { [key: string]: Food } = {
     perishtime: 15,
     sanity: 0,
     cooktime: 2,
+    recipes: ["batnose", "kelp", "goatmilk", "twigs"],
+    pot: "cookpot",
   },
   dustmeringue: {
     test: (tags) => {
@@ -1301,6 +1416,8 @@ const foods: { [key: string]: Food } = {
     perishtime: Infinity,
     sanity: 0,
     cooktime: 2,
+    recipes: ["refined_dust", "twigs", "twigs", "twigs"],
+    pot: "cookpot",
   },
   nightmarepie: {
     test: (tags) => {
@@ -1322,6 +1439,7 @@ const foods: { [key: string]: Food } = {
     sanity: 5,
     cooktime: 2,
     pot: "portablecookpot",
+    recipes: ["nightmarefuel", "nightmarefuel", "potato", "onion"],
   },
   voltgoatjelly: {
     test: (tags) => {
@@ -1343,6 +1461,7 @@ const foods: { [key: string]: Food } = {
     sanity: 10,
     cooktime: 2,
     pot: "portablecookpot",
+    recipes: ["lightninggoathorn", "honey", "honey", "twigs"],
   },
   glowberrymousse: {
     test: (tags) => {
@@ -1366,6 +1485,7 @@ const foods: { [key: string]: Food } = {
     sanity: 10,
     cooktime: 1,
     pot: "portablecookpot",
+    recipes: ["wormlight_lesser", "wormlight_lesser", "berries", "berries"],
   },
   frogfishbowl: {
     test: (tags) => {
@@ -1389,6 +1509,7 @@ const foods: { [key: string]: Food } = {
     sanity: -10,
     cooktime: 2,
     pot: "portablecookpot",
+    recipes: ["froglegs", "pondfish", "pondfish", "kelp"],
   },
   dragonchilisalad: {
     test: (tags) => {
@@ -1411,6 +1532,7 @@ const foods: { [key: string]: Food } = {
     sanity: 10,
     cooktime: 0.75,
     pot: "portablecookpot",
+    recipes: ["dragonfruit", "pepper", "kelp", "kelp"],
   },
   gazpacho: {
     test: (tags) => {
@@ -1432,6 +1554,7 @@ const foods: { [key: string]: Food } = {
     sanity: 10,
     cooktime: 0.5,
     pot: "portablecookpot",
+    recipes: ["asparagus", "ice", "ice", "twigs"],
   },
   potatosouffle: {
     test: (tags) => {
@@ -1454,6 +1577,7 @@ const foods: { [key: string]: Food } = {
     sanity: 15,
     cooktime: 2,
     pot: "portablecookpot",
+    recipes: ["potato", "egg", "kelp", "kelp"],
   },
   monstertartare: {
     test: (tags) => {
@@ -1470,6 +1594,7 @@ const foods: { [key: string]: Food } = {
     sanity: -20,
     cooktime: 0.5,
     pot: "portablecookpot",
+    recipes: ["monstermeat", "monstermeat", "kelp", "kelp"],
   },
   freshfruitcrepes: {
     test: (tags) => {
@@ -1486,6 +1611,7 @@ const foods: { [key: string]: Food } = {
     sanity: 15,
     cooktime: 2,
     pot: "portablecookpot",
+    recipes: ["butter", "honey", "pomegranate", "pomegranate"],
   },
   bonesoup: {
     test: (tags) => {
@@ -1508,6 +1634,7 @@ const foods: { [key: string]: Food } = {
     sanity: 5,
     cooktime: 2,
     pot: "portablecookpot",
+    recipes: ["boneshard", "boneshard", "onion", "kelp"],
   },
   moqueca: {
     test: (tags) => {
@@ -1524,6 +1651,7 @@ const foods: { [key: string]: Food } = {
     sanity: 33,
     cooktime: 2,
     pot: "portablecookpot",
+    recipes: ["pondfish", "tomato", "onion", "kelp"],
   },
 };
 export default foods;
