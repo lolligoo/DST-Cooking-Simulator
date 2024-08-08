@@ -14,7 +14,7 @@ import { useTranslation } from "react-i18next";
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);
   const l = url.searchParams.get("lng");
-  const p = url.searchParams.get("cookpot");
+  const p = url.searchParams.get("pot");
   const r = url.searchParams.get("recipes");
   return json({ l, p, r });
 };
@@ -57,12 +57,12 @@ export default function Cooking() {
       <div className="flex flex-col md:flex-row">
         <div className="flex mb-3">
           <img
-            alt={t("ui.portablecookpot")}
+            alt={t(`ui.${pot}`)}
             src={`/images/${pot}.png`}
             onClick={() =>
               pot == "cookpot" ? setPot("portablecookpot") : setPot("cookpot")
             }
-            className="w-17 h-17 border mr-10"
+            className="w-17 h-17 mr-10"
           />
         </div>
         <div className="flex justify-start relative">
@@ -71,12 +71,8 @@ export default function Cooking() {
               <img
                 key={e}
                 alt={e}
-                src={
-                  pot == "cookpot"
-                    ? "/images/cookpot_slot.png"
-                    : "/images/portablecookpot_slot.png"
-                }
-                className="w-17 h-17 border mr-3"
+                src={`/images/${pot}_slot.png`}
+                className="w-17 h-17 mr-3"
               />
             ))}
           </div>
@@ -93,12 +89,12 @@ export default function Cooking() {
               ))}
           </div>
         </div>
-        <div className="flex mt-5 md:mt-0 ml-0 md:ml-7">
+        <div className="flex mt-3 md:mt-0 ml-0 md:ml-7">
           {foods &&
             foods.map((r, index) => (
               <span
                 key={r + index}
-                className="flex w-17 h-17 items-center justify-center mr-2 bg-slot bg-no-repeat bg-center"
+                className="flex w-17 h-17 items-center justify-center mr-2 bg-slot bg-no-repeat bg-contain"
               >
                 <NavLink key={r} to={`/food/${r}` + location.search}>
                   <img src={`/images/${r}.png`} className="w-16 h-16" alt={r} />
@@ -107,8 +103,8 @@ export default function Cooking() {
             ))}
         </div>
       </div>
-      <div className="flex flex-row mt-5 overflow-y-auto">
-        <div className="w-28 h-full flex flex-col justify-start mt-5 ">
+      <div className="flex flex-row overflow-y-auto">
+        <div className="w-28 h-full flex flex-col justify-start mt-4 ">
           {[
             "all",
             "fruit",
@@ -135,7 +131,7 @@ export default function Cooking() {
             </p>
           ))}
         </div>
-        <div className="flex ml-5 mt-5 flex-wrap overflow-y-auto max-h-128 content-start">
+        <div className="flex ml-5 mt-4 flex-wrap overflow-y-auto max-h-128 content-start">
           {ingredients &&
             Object.keys(ingredients).map((key, i) => (
               <span

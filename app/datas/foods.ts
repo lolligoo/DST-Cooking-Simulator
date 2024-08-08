@@ -8,8 +8,8 @@ interface Food {
   perishtime: number;
   sanity: number;
   cooktime: number;
-  recipes?: string[];
-  pot?: string;
+  recipes: string[];
+  pot: string;
 }
 const foods: { [key: string]: Food } = {
   butterflymuffin: {
@@ -625,6 +625,8 @@ const foods: { [key: string]: Food } = {
     perishtime: Infinity,
     sanity: 5,
     cooktime: 2.5,
+    recipes: ["royal_jelly", "kelp", "kelp", "kelp"],
+    pot: "cookpot",
   },
   potatotornado: {
     test: (tags) => {
@@ -1672,7 +1674,10 @@ export const getFoods = (pot: string, recipes: string[]) => {
   let priority = -100;
   for (const foodName in foods) {
     const food = foods[foodName];
-    if (food.test(tags) && (!food.pot || food.pot == pot)) {
+    if (pot == "cookpot" && food.pot != pot) {
+      continue;
+    }
+    if (food.test(tags)) {
       if (food.priority == priority) {
         prefood.push(foodName);
       }

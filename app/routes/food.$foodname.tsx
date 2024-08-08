@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const foodname = params.foodname;
-  
+
   if (!foodname) {
     throw new Response("Not Found", { status: 404 });
   }
@@ -30,16 +30,14 @@ export default function Food() {
       <div className="flex items-center ">
         <span className="flex flex-col items-center">
           <NavLink
-            to={
-              food.recipes
-                ? `/cooking${location.search}&pot=${food.pot}&recipes=${food.recipes.concat()}`
-                : "/"
-            }
+            to={`/cooking${location.search}&pot=${
+              food.pot
+            }&recipes=${food.recipes.concat()}`}
           >
             <img
-              src={food.pot ? `/images/${food.pot}.png` : "/images/cookpot.png"}
+              src={`/images/${food.pot}.png`}
               className="w-16 h-16 rounded-md"
-              alt={food.pot ? food.pot : "cookpot"}
+              alt={food.pot}
             />
           </NavLink>
         </span>

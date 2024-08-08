@@ -15,8 +15,8 @@ export default function Foods() {
     setFoodNames(searchFoods("all"));
   }, []);
   return (
-    <div className="flex max-h-130">
-      <div className="flex flex-col border-r">
+    <div className="flex max-h-full">
+      <div className="flex flex-col">
         {[
           "all",
           "veggie",
