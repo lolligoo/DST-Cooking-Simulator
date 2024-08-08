@@ -230,7 +230,7 @@ const foods: { [key: string]: Food } = {
     perishtime: 20,
     sanity: 5,
     cooktime: 2,
-    recipes: ["egg", "egg", "meat", "smallmeat"],
+    recipes: ["bird_egg", "bird_egg", "meat", "smallmeat"],
     pot: "cookpot",
   },
   meatballs: {
@@ -281,7 +281,7 @@ const foods: { [key: string]: Food } = {
     perishtime: 20,
     sanity: 5,
     cooktime: 1,
-    recipes: ["egg", "smallmeat", "kelp", "kelp"],
+    recipes: ["bird_egg", "smallmeat", "kelp", "kelp"],
     pot: "cookpot",
   },
   turkeydinner: {
@@ -392,7 +392,7 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 5,
     cooktime: 0.5,
-    recipes: ["butter", "berries", "egg", "twigs"],
+    recipes: ["butter", "berries", "bird_egg", "twigs"],
     pot: "cookpot",
   },
   monsterlasagna: {
@@ -457,7 +457,7 @@ const foods: { [key: string]: Food } = {
     perishtime: 6,
     sanity: 0,
     cooktime: 0.25,
-    recipes: ["egg", "honey", "butter", "goatmilk"],
+    recipes: ["bird_egg", "honey", "butter", "goatmilk"],
     pot: "cookpot",
   },
   flowersalad: {
@@ -985,7 +985,7 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 15,
     cooktime: 0.5,
-    recipes: ["barnacle", "kelp", "egg", "twigs"],
+    recipes: ["barnacle", "kelp", "bird_egg", "twigs"],
     pot: "cookpot",
   },
   barnaclinguine: {
@@ -1272,7 +1272,7 @@ const foods: { [key: string]: Food } = {
     perishtime: 10,
     sanity: 5,
     cooktime: 0.5,
-    recipes: ["egg", "egg", "egg", "twigs"],
+    recipes: ["bird_egg", "bird_egg", "bird_egg", "twigs"],
     pot: "cookpot",
   },
   veggieomlet: {
@@ -1296,7 +1296,7 @@ const foods: { [key: string]: Food } = {
     perishtime: 20,
     sanity: 5,
     cooktime: 1,
-    recipes: ["egg", "egg", "kelp", "kelp"],
+    recipes: ["bird_egg", "bird_egg", "kelp", "kelp"],
     pot: "cookpot",
   },
   talleggs: {
@@ -1579,7 +1579,7 @@ const foods: { [key: string]: Food } = {
     sanity: 15,
     cooktime: 2,
     pot: "portablecookpot",
-    recipes: ["potato", "egg", "kelp", "kelp"],
+    recipes: ["potato", "bird_egg", "kelp", "kelp"],
   },
   monstertartare: {
     test: (tags) => {
