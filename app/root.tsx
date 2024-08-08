@@ -86,7 +86,7 @@ export default function App() {
       <div className="flex w-full mt-6 text-center content-center">
         <Outlet />
       </div>
-      <div className="w-20 flex flex-col fixed bottom-6 left-1 justify-center items-center">
+      <div className="w-20 flex flex-col fixed bottom-1 left-1 justify-center items-center">
         {show && (
           <span className="flex flex-col ">
             <p
