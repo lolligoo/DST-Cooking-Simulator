@@ -7,7 +7,7 @@ export default {
       maxHeight: {
         "128": "32rem",
         "130": "36rem",
-        "132": "40rem",
+        "132": "38rem",
       },
       height: {
         "17": "70px",
@@ -28,6 +28,7 @@ export default {
         foodtype: "url('/images/foodtype.png')",
         button: "url('/images/button_large.png')",
         book: "url('/images/tab_book.png')",
+        full:"url('/images/full-bg.jpg')"
       },
       fontWeight: {
         m: "520",

@@ -54,7 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="flex justify-center h-full bg-slate-300">
+      <body className="flex justify-center max-h-dvh h-dvh max-w-dvw w-dvw bg-full bg-clip-border bg-bottom bg-no-repeat bg-cover">
         {children}
         <ScrollRestoration />
         <Scripts />
