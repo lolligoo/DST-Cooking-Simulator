@@ -55,31 +55,6 @@ export default function Cooking() {
   return (
     <div className="w-full">
       <div className="flex flex-col md:flex-row">
-        <div className="flex mb-3">
-          <img
-            alt={t(`ui.${pot}`)}
-            src={`/images/${pot}.png`}
-            onClick={() =>
-              pot == "cookpot" ? setPot("portablecookpot") : setPot("cookpot")
-            }
-            className="w-17 h-17 mr-3"
-          />
-          {foods &&
-            foods.map((r, index) => (
-              <div
-                key={r + index}
-                className="flex w-17 h-17 bg-slot bg-no-repeat bg-clip-border"
-              >
-                <NavLink key={r} to={`/food/${r}` + location.search}>
-                  <img
-                    src={`/images/${r}.png`}
-                    className="w-16 h-16 mr-4"
-                    alt={r}
-                  />
-                </NavLink>
-              </div>
-            ))}
-        </div>
         <div className="flex justify-start relative">
           <div className="flex">
             {["1", "2", "3", "4"].map((e) => (
@@ -103,6 +78,31 @@ export default function Cooking() {
                 />
               ))}
           </div>
+        </div>
+        <div className="flex mt-3">
+          <img
+            alt={t(`ui.${pot}`)}
+            src={`/images/${pot}.png`}
+            onClick={() =>
+              pot == "cookpot" ? setPot("portablecookpot") : setPot("cookpot")
+            }
+            className="w-17 h-17 mr-3"
+          />
+          {foods &&
+            foods.map((r, index) => (
+              <div
+                key={r + index}
+                className="flex w-17 h-17 bg-slot bg-no-repeat bg-clip-border"
+              >
+                <NavLink key={r} to={`/food/${r}` + location.search}>
+                  <img
+                    src={`/images/${r}.png`}
+                    className="w-16 h-16 mr-4"
+                    alt={r}
+                  />
+                </NavLink>
+              </div>
+            ))}
         </div>
       </div>
       <div className="flex flex-col">
