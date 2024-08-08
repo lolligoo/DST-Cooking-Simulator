@@ -48,7 +48,7 @@ export default function Foods() {
               <NavLink to={`/food/${key}` + location.search}>
                 <img
                   src={`/images/${key}.png`}
-                  className="w-16 h-16 pb-1"
+                  className="w-16 h-16 mb-1"
                   alt={t("foods." + key)}
                 />
               </NavLink>

@@ -97,7 +97,7 @@ export default function Cooking() {
                 className="flex w-17 h-17 items-center justify-center mr-2 bg-slot bg-no-repeat bg-contain"
               >
                 <NavLink key={r} to={`/food/${r}` + location.search}>
-                  <img src={`/images/${r}.png`} className="w-16 h-16 pb-1" alt={r} />
+                  <img src={`/images/${r}.png`} className="w-16 h-16 mb-1" alt={r} />
                 </NavLink>
               </span>
             ))}
@@ -140,7 +140,7 @@ export default function Cooking() {
               >
                 <img
                   src={`/images/${key}.png`}
-                  className="flex w-16 h-16 pb-2"
+                  className="flex w-16 h-16 mb-1"
                   alt={t("ingredients." + key)}
                   onClick={() => addIngredient(key)}
                 />
