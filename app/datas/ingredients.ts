@@ -143,10 +143,10 @@ const ingredients: Ingredient = {
     values: { meat: 0.5, fish: 1 },
     canCook: true,
   },
-  // fish: {
-  //   values: { meat: 1, fish: 1 },
-  //   canCook: true,
-  // },
+  fish: {
+    values: { meat: 0.5, fish: 0.5 },
+    canCook: true,
+  },
   pondeel: {
     values: { meat: 0.5, fish: 1 },
   },
@@ -215,9 +215,6 @@ const ingredients: Ingredient = {
   oceanfish_medium_9: {
     values: { meat: 1, fish: 1 },
   },
-  // oceanfish_medium_ice: {
-  //   values: { meat: 1, fish: 1, frozen: 1 },
-  // },
   kelp: {
     values: { veggie: 0.5 },
     canCook: true,
@@ -291,6 +288,9 @@ const ingredients: Ingredient = {
     values: { inedible: 1 },
   },
   wobster_sheller_land: {
+    values: { meat: 1, fish: 1 },
+  },
+  wobster_moonglass_land: {
     values: { meat: 1, fish: 1 },
   },
   barnacle: {

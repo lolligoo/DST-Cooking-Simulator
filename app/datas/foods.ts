@@ -914,7 +914,10 @@ const foods: { [key: string]: Food } = {
   },
   lobsterbisque: {
     test: (tags) => {
-      if (tags.wobster_sheller_land && tags.frozen) {
+      if (
+        (tags.wobster_sheller_land || tags.wobster_moonglass_land) &&
+        tags.frozen
+      ) {
         return true;
       }
       return false;
@@ -932,7 +935,7 @@ const foods: { [key: string]: Food } = {
   lobsterdinner: {
     test: (tags) => {
       if (
-        tags.wobster_sheller_land &&
+        (tags.wobster_sheller_land || tags.wobster_moonglass_land) &&
         tags.butter &&
         tags.meat &&
         tags.meat >= 1.0 &&
