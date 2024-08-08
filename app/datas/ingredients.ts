@@ -144,8 +144,7 @@ const ingredients: Ingredient = {
     canCook: true,
   },
   fish: {
-    values: { meat: 0.5, fish: 0.5 },
-    canCook: true,
+    values: { meat: 0.5, fish: 0.5 }
   },
   pondeel: {
     values: { meat: 0.5, fish: 1 },
@@ -288,9 +287,6 @@ const ingredients: Ingredient = {
     values: { inedible: 1 },
   },
   wobster_sheller_land: {
-    values: { meat: 1, fish: 1 },
-  },
-  wobster_moonglass_land: {
     values: { meat: 1, fish: 1 },
   },
   barnacle: {
