@@ -62,8 +62,23 @@ export default function Cooking() {
             onClick={() =>
               pot == "cookpot" ? setPot("portablecookpot") : setPot("cookpot")
             }
-            className="w-17 h-17 mr-10"
+            className="w-17 h-17 mr-3"
           />
+          {foods &&
+            foods.map((r, index) => (
+              <div
+                key={r + index}
+                className="flex w-17 h-17 bg-slot bg-no-repeat bg-clip-border"
+              >
+                <NavLink key={r} to={`/food/${r}` + location.search}>
+                  <img
+                    src={`/images/${r}.png`}
+                    className="w-16 h-16 mr-4"
+                    alt={r}
+                  />
+                </NavLink>
+              </div>
+            ))}
         </div>
         <div className="flex justify-start relative">
           <div className="flex">
@@ -88,23 +103,6 @@ export default function Cooking() {
                 />
               ))}
           </div>
-        </div>
-        <div className="flex mt-3 md:mt-0 ml-0 md:ml-7">
-          {foods &&
-            foods.map((r, index) => (
-              <div
-                key={r + index}
-                className="flex w-17 h-17 bg-slot bg-no-repeat bg-clip-border"
-              >
-                <NavLink key={r} to={`/food/${r}` + location.search}>
-                  <img
-                    src={`/images/${r}.png`}
-                    className="w-16 h-16 mr-5"
-                    alt={r}
-                  />
-                </NavLink>
-              </div>
-            ))}
         </div>
       </div>
       <div className="flex flex-col">
@@ -137,7 +135,7 @@ export default function Cooking() {
             ))}
           </span>
         </div>
-        <div className="flex mt-4 flex-wrap overflow-auto max-h-80">
+        <div className="flex mt-4 flex-wrap overflow-auto max-h-80 justify-center">
           {ingredients &&
             Object.keys(ingredients).map((key, i) => (
               <span
