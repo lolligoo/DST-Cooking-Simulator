@@ -29,10 +29,7 @@ export default {
         button: "url('/images/button_large.png')",
         book: "url('/images/tab_book.png')",
         full:"url('/images/full-bg.jpg')"
-      },
-      fontWeight: {
-        m: "520",
-      },
+      }
     },
   },
   plugins: [],
