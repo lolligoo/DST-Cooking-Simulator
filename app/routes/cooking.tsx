@@ -79,7 +79,7 @@ export default function Cooking() {
               ))}
           </div>
         </div>
-        <div className="flex mt-3">
+        <div className="flex mt-3 md:mt-0">
           <img
             alt={t(`ui.${pot}`)}
             src={`/images/${pot}.png`}
@@ -105,9 +105,9 @@ export default function Cooking() {
             ))}
         </div>
       </div>
-      <div className="flex flex-col">
-        <div className="flex overflow-auto">
-          <span className="flex mt-4 justify-start w-fit">
+      <div className="flex flex-col sm:flex-row">
+        <div className=" flex overflow-auto sm:overflow-visible">
+          <span className="flex mt-4 justify-start flex-row sm:flex-col">
             {[
               "all",
               "fruit",
@@ -135,7 +135,7 @@ export default function Cooking() {
             ))}
           </span>
         </div>
-        <div className="flex mt-4 flex-wrap overflow-auto max-h-72 justify-center ">
+        <div className="flex mt-4 flex-wrap overflow-auto max-h-80 justify-center sm:max-h-130">
           {ingredients &&
             Object.keys(ingredients).map((key, i) => (
               <span
