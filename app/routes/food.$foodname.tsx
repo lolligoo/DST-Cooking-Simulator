@@ -43,24 +43,24 @@ export default function Food() {
         </span>
       </div>
       <div className="flex mt-5 justify-between w-80">
-        <p className="w-16 h-16 rounded-full bg-health bg-cover content-center font-m text-lg text-slate-50">
+        <p className="w-16 h-16 rounded-full bg-health bg-cover content-center font-bold text-lg">
           {food.health}
         </p>
-        <p className="w-16 h-16 rounded-full bg-hunger bg-cover content-center font-m text-lg text-slate-50">
+        <p className="w-16 h-16 rounded-full bg-hunger bg-cover content-center font-bold text-lg">
           {food.hunger}
         </p>
-        <p className="w-16 h-16 rounded-full bg-sanity bg-cover content-center font-m text-lg text-slate-50">
+        <p className="w-16 h-16 rounded-full bg-sanity bg-cover content-center font-bold text-lg">
           {food.sanity}
         </p>
-        <p className="w-16 h-16 rounded-full bg-perishtime bg-cover content-center font-m text-lg text-slate-50">
+        <p className="w-16 h-16 rounded-full bg-perishtime bg-cover content-center font-bold text-lg">
           {food.perishtime ? food.perishtime + t("ui.days") : t("ui.forever")}
         </p>
       </div>
       <div className="flex mt-5 justify-between w-40 items-center">
-        <p className="w-16 h-16 rounded-full bg-cooktime bg-cover content-center font-m text-lg text-slate-50">
+        <p className="w-16 h-16 rounded-full bg-cooktime bg-cover content-center font-bold text-lg">
           {food.cooktime * 20 + t("ui.s")}
         </p>
-        <p className="w-16 h-16 rounded-full bg-foodtype bg-cover content-center font-m text-lg text-slate-50">
+        <p className="w-16 h-16 rounded-full bg-foodtype bg-cover content-center font-bold text-lg">
           {t("ui." + food.foodtype)}
         </p>
       </div>
