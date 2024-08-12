@@ -243,6 +243,7 @@
     "other": "Other",
     "s": "s",
     "days": " days",
-    "forever": "Forever"
+    "forever": "Forever",
+    "full":"The pot is full. please take out the ingredients first."
   }
 }

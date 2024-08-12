@@ -26,6 +26,7 @@ export default function Cooking() {
   const [foods, setFoods] = useState<string[]>([]);
   const [pot, setPot] = useState<string>(p ? p : "cookpot");
   const [active, setActive] = useState<string>("all");
+  const [isFull, setIsFull] = useState<boolean>(false);
   const navigate = useNavigate();
   let { t } = useTranslation();
   const location = useLocation();
@@ -36,13 +37,14 @@ export default function Cooking() {
   };
   const addIngredient = (k: string) => {
     if (recipes.length >= 4) {
-      alert(t("ui.full"));
+      setIsFull(true);
       return;
     }
     setRecipes([...recipes, k]);
   };
   const removeIngredient = (index: number) => {
     setFoods([]);
+    setIsFull(false);
     setRecipes(recipes.filter((e, i) => i !== index));
   };
   // i
@@ -157,7 +159,13 @@ export default function Cooking() {
             ))}
         </div>
       </div>
-      <p className="absolute "> {t(`ui.full`)}</p>
+      {isFull && (
+        <div className="fixed w-dvw flex justify-center items-center top-1/2 left-0">
+        <p className="w-60 font-medium text-lg backdrop-blur">
+          {t(`ui.full`)}
+        </p>
+        </div>
+      )}
     </div>
   );
 }
