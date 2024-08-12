@@ -45,26 +45,26 @@ export default function Food() {
       <div className="flex mt-3 justify-between w-80">
         <span className="flex flex-col items-center">
           <p className="w-16 h-16 rounded-full bg-health bg-cover content-center"></p>
-          <p className="w-16 font-normal text-base content-center text-center">
+          <p className="w-16 font-medium text-base content-center text-center">
             {food.health}
           </p>
         </span>
         <span className="flex flex-col items-center">
           <p className="w-16 h-16 rounded-full bg-hunger bg-cover content-center"></p>
-          <p className="w-16 font-normal text-base content-center text-center">
+          <p className="w-16 font-medium text-base content-center text-center">
             {food.hunger}
           </p>
         </span>
         <span className="flex flex-col items-center">
           <p className="w-16 h-16 rounded-full bg-sanity bg-cover content-center"></p>
-          <p className="w-16 font-normal text-base content-center text-center">
+          <p className="w-16 font-medium text-base content-center text-center">
             {food.sanity}
           </p>
         </span>
         <span className="flex flex-col items-center ">
           <p className="w-16 h-16 rounded-full bg-perishtime bg-cover content-center"></p>
           <p
-            className={`w-16 font-normal ${
+            className={`w-16 font-medium ${
               foodname == "powcake" ? "text-xs" : "text-base"
             } content-center text-center`}
           >
