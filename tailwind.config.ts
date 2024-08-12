@@ -5,6 +5,7 @@ export default {
   theme: {
     extend: {
       maxHeight: {
+        "100": "25rem",
         "128": "32rem",
         "130": "35rem",
         "132": "38rem",

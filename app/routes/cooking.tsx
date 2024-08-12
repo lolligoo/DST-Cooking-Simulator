@@ -110,9 +110,9 @@ export default function Cooking() {
             ))}
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row">
-        <div className=" flex overflow-auto sm:overflow-visible">
-          <span className="flex mt-4 justify-start flex-row sm:flex-col">
+      <div className="flex">
+        <div className="flex overflow-y-auto max-h-96 sm:max-h-none mt-4 w-fit">
+          <span className="flex mt-4 justify-start flex-col h-fit">
             {[
               "all",
               "fruit",
@@ -142,7 +142,7 @@ export default function Cooking() {
             ))}
           </span>
         </div>
-        <div className="flex mt-4 flex-wrap overflow-auto max-h-80 justify-center sm:max-h-130">
+        <div className="flex mt-4 flex-wrap overflow-auto max-h-96 justify-center sm:max-h-130 w-4/6">
           {ingredients &&
             Object.keys(ingredients).map((key, i) => (
               <span
@@ -161,9 +161,9 @@ export default function Cooking() {
       </div>
       {isFull && (
         <div className="fixed w-dvw flex justify-center items-center top-1/2 left-0">
-        <p className="w-60 font-medium text-lg backdrop-blur">
-          {t(`ui.full`)}
-        </p>
+          <p className="w-60 font-medium text-lg backdrop-blur">
+            {t(`ui.full`)}
+          </p>
         </div>
       )}
     </div>
