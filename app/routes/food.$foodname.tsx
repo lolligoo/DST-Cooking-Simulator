@@ -28,7 +28,7 @@ export default function Food() {
         <img src={`/images/cookbook_${foodname}.png`} className="w-60 h-60" />
       </span>
       <div className="flex items-center mt-3">
-        <span className="flex flex-col items-center">
+        <span className="flex flex-col items-center hover:brightness-75 brightness-100">
           <NavLink
             to={`/cooking${location.search}&pot=${
               food.pot

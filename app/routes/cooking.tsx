@@ -25,12 +25,14 @@ export default function Cooking() {
   const [recipes, setRecipes] = useState<string[]>(r ? r.split(",") : []);
   const [foods, setFoods] = useState<string[]>([]);
   const [pot, setPot] = useState<string>(p ? p : "cookpot");
+  const [active, setActive] = useState<string>("all");
   const navigate = useNavigate();
   let { t } = useTranslation();
   const location = useLocation();
 
   const handleClick = (category: string) => {
     setIngredients(searchIngredients(category));
+    setActive(category);
   };
   const addIngredient = (k: string) => {
     if (recipes.length >= 4) {
@@ -62,7 +64,7 @@ export default function Cooking() {
                 key={e}
                 alt={e}
                 src={`/images/${pot}_slot.png`}
-                className="w-17 h-17 mr-3"
+                className="w-17 h-17 mr-3 hover:brightness-75 brightness-100"
               />
             ))}
           </div>
@@ -72,7 +74,7 @@ export default function Cooking() {
                 <img
                   key={r + index}
                   src={`/images/${r}.png`}
-                  className="w-16 h-16 mr-[19px]"
+                  className="w-16 h-16 mr-[19px] hover:brightness-75 brightness-100"
                   alt={r}
                   onClick={() => removeIngredient(index)}
                 />
@@ -86,7 +88,7 @@ export default function Cooking() {
             onClick={() =>
               pot == "cookpot" ? setPot("portablecookpot") : setPot("cookpot")
             }
-            className="w-17 h-17 mr-3"
+            className="w-17 h-17 mr-3 hover:brightness-75 brightness-100"
           />
           {foods &&
             foods.map((r, index) => (
@@ -97,7 +99,7 @@ export default function Cooking() {
                 <NavLink key={r} to={`/food/${r}` + location.search}>
                   <img
                     src={`/images/${r}.png`}
-                    className="w-16 h-16 mr-4"
+                    className="w-16 h-16 mr-4 hover:brightness-75 brightness-100"
                     alt={r}
                   />
                 </NavLink>
@@ -127,7 +129,9 @@ export default function Cooking() {
             ].map((e) => (
               <p
                 key={e}
-                className="w-24 h-10 rounded-md bg-button bg-cover bg-no-repeat text-center content-center font-medium"
+                className={`w-24 h-10 rounded-md bg-button bg-cover bg-no-repeat text-center content-center font-medium hover:brightness-75 brightness-100" ${
+                  active == e ? "saturate-200" : ""
+                }`}
                 onClick={() => handleClick(e)}
               >
                 {t(`ui.${e}`)}
@@ -144,7 +148,7 @@ export default function Cooking() {
               >
                 <img
                   src={`/images/${key}.png`}
-                  className="flex w-16 h-16 mr-2"
+                  className="flex w-16 h-16 mr-2 hover:brightness-75 brightness-100"
                   alt={t("ingredients." + key)}
                   onClick={() => addIngredient(key)}
                 />

@@ -5,11 +5,13 @@ import { useTranslation } from "react-i18next";
 
 export default function Foods() {
   const [foodNames, setFoodNames] = useState<string[]>([]);
+  const [active, setActive] = useState<string>("all");
   const { t } = useTranslation();
   const location = useLocation();
 
   const handleClick = (category: string) => {
     setFoodNames(searchFoods(category));
+    setActive(category);
   };
   useEffect(() => {
     setFoodNames(searchFoods("all"));
@@ -32,7 +34,9 @@ export default function Foods() {
             onClick={() => {
               handleClick(e);
             }}
-            className="w-24 h-10 rounded-md bg-button bg-cover bg-no-repeat text-center content-center font-medium"
+            className={`w-24 h-10 rounded-md bg-button bg-cover bg-no-repeat text-center content-center font-medium hover:brightness-75 brightness-100 ${
+              active == e ? "saturate-200" : ""
+            }`}
           >
             {t(`ui.${e}`)}
           </p>
@@ -43,7 +47,7 @@ export default function Foods() {
           foodNames.map((key) => (
             <span
               key={key}
-              className="flex w-17 h-17 items-center justify-center bg-slot bg-no-repeat bg-clip-border"
+              className="flex w-17 h-17 items-center justify-center bg-slot bg-no-repeat bg-clip-border hover:brightness-75 brightness-100"
             >
               <NavLink to={`/food/${key}` + location.search}>
                 <img
