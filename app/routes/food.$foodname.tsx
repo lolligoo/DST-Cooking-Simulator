@@ -57,8 +57,8 @@ export default function Food() {
         </span>
         <span className="flex flex-col items-center ">
           <p className="w-16 h-16 rounded-full bg-perishtime bg-cover content-center"></p>
-          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">
-            {food.perishtime ? food.perishtime : t("ui.forever")}
+          <p className="w-14 font-medium text-xs bg-button bg-cover bg-center content-center text-center">
+            {food.perishtime ? food.perishtime + t("ui.days") : t("ui.forever")}
           </p>
         </span>
       </div>
@@ -69,7 +69,7 @@ export default function Food() {
         </span>
         <span className="flex flex-col items-center ">
           <p className="w-16 h-16 rounded-full bg-foodtype bg-cover content-center"></p>
-          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">{t("ui." + food.foodtype)}</p>
+          <p className="w-14 font-medium text-xs bg-button bg-cover bg-center content-center text-center">{t("ui." + food.foodtype)}</p>
         </span>
       </div>
     </div>
