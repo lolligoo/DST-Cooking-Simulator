@@ -133,7 +133,7 @@ export default function Cooking() {
               <p
                 key={e}
                 className={`w-24 h-10 rounded-md bg-button bg-cover bg-no-repeat text-center content-center font-medium hover:brightness-75 brightness-100" ${
-                  active == e ? "saturate-200" : ""
+                  active == e && "saturate-200"
                 }`}
                 onClick={() => handleClick(e)}
               >
