@@ -142,7 +142,7 @@ export default function Cooking() {
             ))}
           </span>
         </div>
-        <div className="flex mt-4 flex-wrap overflow-auto max-h-96 justify-center sm:max-h-130 w-4/6">
+        <div className="flex mt-4 flex-wrap overflow-auto max-h-96 sm:max-h-130 w-4/6 content-start ml-2">
           {ingredients &&
             Object.keys(ingredients).map((key, i) => (
               <span
