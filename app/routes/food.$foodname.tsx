@@ -25,7 +25,7 @@ export default function Food() {
     <div className="flex flex-col w-full items-center justify-center">
       <h1 className="text-2xl font-blod">{t("foods." + foodname)}</h1>
       <span className="flex w-64 h-64 bg-l bg-no-repeat bg-center items-center justify-center bg-cover mt-2">
-        <img src={`/images/cookbook_${foodname}.png`} className="w-60 h-60" />
+        <img src={`/images/cookbook_${foodname}.png`} className="w-56 h-56" />
       </span>
       <div className="flex items-center mt-3">
         <span className="flex flex-col items-center hover:brightness-75 brightness-100">

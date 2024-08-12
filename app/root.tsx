@@ -70,8 +70,8 @@ export default function App() {
   let { t } = useTranslation();
   return (
     <div className="font-sans p-4 flex flex-col items-center w-full xl:w-3/5 fixed">
-      <div className="w-full flex justify-between items-center ">
-        <h1 className="font-medium content-center text-center ">
+      <div className="w-full flex justify-between items-cente border-b-2 border-b-amber-200 border-dotted">
+        <h1 className="font-medium content-center text-center">
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>
         </h1>
         <div className="flex">

@@ -36,6 +36,7 @@ export default function Cooking() {
   };
   const addIngredient = (k: string) => {
     if (recipes.length >= 4) {
+      alert(t("ui.full"));
       return;
     }
     setRecipes([...recipes, k]);
@@ -64,7 +65,7 @@ export default function Cooking() {
                 key={e}
                 alt={e}
                 src={`/images/${pot}_slot.png`}
-                className="w-17 h-17 mr-3 hover:brightness-75 brightness-100"
+                className="w-17 h-17 mr-3 hover:brightness-75 brightness-100 active:brightness-100"
               />
             ))}
           </div>
@@ -74,7 +75,7 @@ export default function Cooking() {
                 <img
                   key={r + index}
                   src={`/images/${r}.png`}
-                  className="w-16 h-16 mr-[19px] hover:brightness-75 brightness-100"
+                  className="w-16 h-16 mr-[19px] hover:brightness-75 brightness-100 active:brightness-100"
                   alt={r}
                   onClick={() => removeIngredient(index)}
                 />
@@ -99,7 +100,7 @@ export default function Cooking() {
                 <NavLink key={r} to={`/food/${r}` + location.search}>
                   <img
                     src={`/images/${r}.png`}
-                    className="w-16 h-16 mr-4 hover:brightness-75 brightness-100"
+                    className="w-16 h-16 mr-4 hover:brightness-75 brightness-100 active:brightness-100"
                     alt={r}
                   />
                 </NavLink>
@@ -156,6 +157,7 @@ export default function Cooking() {
             ))}
         </div>
       </div>
+      <p className="absolute "> {t(`ui.full`)}</p>
     </div>
   );
 }
