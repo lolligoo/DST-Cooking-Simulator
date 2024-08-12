@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
   useLoaderData,
   useNavigate,
+  useLocation,
 } from "@remix-run/react";
 import "./tailwind.css";
 import { useChangeLanguage } from "remix-i18next/react";
@@ -68,6 +69,7 @@ export default function App() {
   let { locale } = useLoaderData<typeof loader>();
   const [show, setShow] = useState<boolean>(false);
   let { t } = useTranslation();
+  const location = useLocation();
   return (
     <div className="font-sans p-4 flex flex-col items-center w-full xl:w-3/5 fixed">
       <div className="w-full flex justify-between items-cente ">
@@ -75,10 +77,18 @@ export default function App() {
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>
         </h1>
         <div className="flex">
-          <h1 className="w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium hover:brightness-75 brightness-100">
+          <h1
+            className={`w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium hover:brightness-75 brightness-100 ${
+              location.pathname.indexOf("cookpot") && "saturate-200"
+            }`}
+          >
             <NavLink to={"cookpot?lng=" + locale}>{t("ui.cookpot")}</NavLink>
           </h1>
-          <h1 className="w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium hover:brightness-75 brightness-100">
+          <h1
+            className={`w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium hover:brightness-75 brightness-100 ${
+              location.pathname.indexOf("foods") && "saturate-200"
+            }`}
+          >
             <NavLink to={"foods?lng=" + locale}>{t("ui.foods")}</NavLink>
           </h1>
         </div>
