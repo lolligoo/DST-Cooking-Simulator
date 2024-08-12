@@ -76,7 +76,7 @@ export default function App() {
         </h1>
         <div className="flex">
           <h1 className="w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium hover:brightness-75 brightness-100">
-            <NavLink to={"cooking?lng=" + locale}>{t("ui.cooking")}</NavLink>
+            <NavLink to={"cookpot?lng=" + locale}>{t("ui.cookpot")}</NavLink>
           </h1>
           <h1 className="w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium hover:brightness-75 brightness-100">
             <NavLink to={"foods?lng=" + locale}>{t("ui.foods")}</NavLink>

@@ -216,8 +216,7 @@
     "moqueca": "Moqueca"
   },
   "ui": {
-    "title": "DST Cooking Simulator",
-    "cooking": "Cooking",
+    "title": "DST Cook Pot Simulator",
     "foods": "Meals",
     "cookpot": "Cook Pot",
     "portablecookpot": "Portable Cook Pot",

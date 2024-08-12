@@ -30,7 +30,7 @@ export default function Food() {
       <div className="flex items-center mt-3">
         <span className="flex flex-col items-center hover:brightness-75 brightness-100">
           <NavLink
-            to={`/cooking${location.search}&pot=${
+            to={`/cookpot${location.search}&pot=${
               food.pot
             }&recipes=${food.recipes.concat()}`}
           >
