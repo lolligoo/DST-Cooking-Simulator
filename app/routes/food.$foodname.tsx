@@ -45,19 +45,25 @@ export default function Food() {
       <div className="flex mt-3 justify-between w-80">
         <span className="flex flex-col items-center">
           <p className="w-16 h-16 rounded-full bg-health bg-cover content-center"></p>
-          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">{food.health}</p>
+          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">
+            {food.health}
+          </p>
         </span>
         <span className="flex flex-col items-center">
           <p className="w-16 h-16 rounded-full bg-hunger bg-cover content-center"></p>
-          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">{food.hunger}</p>
+          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">
+            {food.hunger}
+          </p>
         </span>
         <span className="flex flex-col items-center">
           <p className="w-16 h-16 rounded-full bg-sanity bg-cover content-center"></p>
-          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">{food.sanity}</p>
+          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">
+            {food.sanity}
+          </p>
         </span>
         <span className="flex flex-col items-center ">
           <p className="w-16 h-16 rounded-full bg-perishtime bg-cover content-center"></p>
-          <p className="w-14 font-medium text-xs bg-button bg-cover bg-center content-center text-center">
+          <p className="w-14 h-6 font-medium text-xs bg-button bg-cover bg-center content-center text-center">
             {food.perishtime ? food.perishtime + t("ui.days") : t("ui.forever")}
           </p>
         </span>
@@ -65,11 +71,15 @@ export default function Food() {
       <div className="flex mt-3 justify-between w-40 items-center">
         <span className="flex flex-col items-center ">
           <p className="w-16 h-16 rounded-full bg-cooktime bg-cover content-center"></p>
-          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">{food.cooktime * 20 + t("ui.s")}</p>
+          <p className="w-14 font-medium text-base bg-button bg-cover bg-center content-center text-center">
+            {food.cooktime * 20 + t("ui.s")}
+          </p>
         </span>
         <span className="flex flex-col items-center ">
           <p className="w-16 h-16 rounded-full bg-foodtype bg-cover content-center"></p>
-          <p className="w-14 font-medium text-xs bg-button bg-cover bg-center content-center text-center">{t("ui." + food.foodtype)}</p>
+          <p className="w-14 h-6 font-medium text-xs bg-button bg-cover bg-center content-center text-center">
+            {t("ui." + food.foodtype)}
+          </p>
         </span>
       </div>
     </div>
