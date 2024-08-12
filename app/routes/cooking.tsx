@@ -111,7 +111,7 @@ export default function Cooking() {
         </div>
       </div>
       <div className="flex">
-        <div className="flex overflow-y-auto max-h-96 sm:max-h-none mt-4 w-fit">
+        <div className="flex overflow-y-auto max-h-96 sm:max-h-none w-fit">
           <span className="flex mt-4 justify-start flex-col h-fit">
             {[
               "all",
