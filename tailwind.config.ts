@@ -30,6 +30,7 @@ export default {
         button: "url('/images/ui/button_large.png')",
         book: "url('/images/ui/tab_book.png')",
         full: "url('/images/ui/full-bg.jpg')",
+        banner: "url('/images/ui/banner.png')",
       },
     },
   },
