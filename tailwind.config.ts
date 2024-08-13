@@ -3,6 +3,9 @@ import type { Config } from "tailwindcss";
 export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      belisa: ["belisa"],
+    },
     extend: {
       maxHeight: {
         "100": "25rem",
@@ -29,12 +32,12 @@ export default {
         foodtype: "url('/images/foodtype.png')",
         button: "url('/images/button_large.png')",
         book: "url('/images/tab_book.png')",
-        full:"url('/images/full-bg.jpg')"
-      }
+        full: "url('/images/full-bg.jpg')",
+      },
     },
   },
   plugins: [],
   future: {
-    hoverOnlyWhenSupported: true
-  }
+    hoverOnlyWhenSupported: true,
+  },
 } satisfies Config;
