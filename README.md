@@ -1,2 +1,2 @@
-# DST-Cooking-Simulator
-DST Cooking Simulator
+# DST Cook Pot Simulator
+DST Cook Pot Simulator

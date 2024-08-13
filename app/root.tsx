@@ -13,7 +13,7 @@ import "./tailwind.css";
 import { useChangeLanguage } from "remix-i18next/react";
 import { useTranslation } from "react-i18next";
 import i18next from "./i18next.server";
-import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
+import { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useState } from "react";
 
@@ -41,7 +41,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
   // Get the locale from the loader
   let { locale } = useLoaderData<typeof loader>();
   let { i18n } = useTranslation();
-
   // This hook will change the i18n instance language to the current locale
   // detected by the loader, this way, when we do something to change the
   // language, this locale will change and i18next will load the correct
@@ -71,9 +70,9 @@ export default function App() {
   let { t } = useTranslation();
   const location = useLocation();
   return (
-    <div className="font-sans p-4 flex flex-col items-center w-full xl:w-3/5 fixed">
+    <div className="font-mono p-4 flex flex-col items-center w-full xl:w-3/5 fixed">
       <div className="w-full flex justify-between items-cente ">
-        <h1 className="font-medium content-center text-center">
+        <h1 className="font-medium content-center text-center text-sm">
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>
         </h1>
         <div className="flex">

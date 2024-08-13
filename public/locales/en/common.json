@@ -243,6 +243,8 @@
     "s": " s",
     "days": " days",
     "forever": "Forever",
-    "full":"The pot is full. please take out the ingredients first."
+    "full": "The pot is full. please take out the ingredients first.",
+    "not": "Not Found",
+    "go": "Go Home"
   }
 }

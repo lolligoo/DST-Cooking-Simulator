@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const foodname = params.foodname;
-
   if (!foodname) {
     throw new Response("Not Found", { status: 404 });
   }
@@ -16,6 +15,18 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   }
   if (food) return json({ foodname, food });
 };
+
+export function ErrorBoundary() {
+  const { t } = useTranslation();
+  return (
+    <div className="w-dvw flex flex-col items-center">
+      <h1>{t("ui.not")}</h1>
+      <p className="bg-button w-20 bg-cover h-8 mt-5 content-center text-center font-medium hover:brightness-75 brightness-100">
+        <NavLink to={"/"}>{t("ui.go")}</NavLink>
+      </p>
+    </div>
+  );
+}
 
 export default function Food() {
   const location = useLocation();
