@@ -914,10 +914,7 @@ const foods: { [key: string]: Food } = {
   },
   lobsterbisque: {
     test: (tags) => {
-      if (
-        tags.wobster_sheller_land &&
-        tags.frozen
-      ) {
+      if (tags.wobster_sheller_land && tags.frozen) {
         return true;
       }
       return false;
@@ -1697,7 +1694,7 @@ const phaseTags = (names: string[]) => {
   let tags: { [key: string]: number } = {};
   names.map((n) => {
     let k = n.replace("_cooked", "").replace("_dried", "");
-    if (k !== "meat" && k !== "fish" && n !== 'drumstick_cooked') {
+    if (k !== "meat" && k !== "fish" && n !== "drumstick_cooked") {
       if (tags[k]) {
         tags[k] += 1;
       } else {
