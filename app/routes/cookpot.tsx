@@ -66,7 +66,7 @@ export default function Cooking() {
               <img
                 key={e}
                 alt={e}
-                src={`/images/${pot}_slot.png`}
+                src={`/images/ui/${pot}_slot.png`}
                 className="w-17 h-17 mr-3 hover:brightness-75 brightness-100 active:brightness-100"
               />
             ))}
@@ -76,7 +76,7 @@ export default function Cooking() {
               recipes.map((r, index) => (
                 <img
                   key={r + index}
-                  src={`/images/${r}.png`}
+                  src={`/images/ingredients/${r}.png`}
                   className="w-16 h-16 mr-[19px] hover:brightness-75 brightness-100 active:brightness-100"
                   alt={r}
                   onClick={() => removeIngredient(index)}
@@ -87,7 +87,7 @@ export default function Cooking() {
         <div className="flex mt-3 md:mt-0">
           <img
             alt={t(`ui.${pot}`)}
-            src={`/images/${pot}.png`}
+            src={`/images/ui/${pot}.png`}
             onClick={() =>
               pot == "cookpot" ? setPot("portablecookpot") : setPot("cookpot")
             }
@@ -101,7 +101,7 @@ export default function Cooking() {
               >
                 <NavLink key={r} to={`/food/${r}` + location.search}>
                   <img
-                    src={`/images/${r}.png`}
+                    src={`/images/foods/${r}.png`}
                     className="w-16 h-16 mr-4 hover:brightness-75 brightness-100 active:brightness-100"
                     alt={r}
                   />
@@ -150,7 +150,7 @@ export default function Cooking() {
                 className="flex w-17 h-17 items-center justify-center bg-slot bg-no-repeat bg-clip-border"
               >
                 <img
-                  src={`/images/${key}.png`}
+                  src={`/images/ingredients/${key}.png`}
                   className="flex w-16 h-16 mr-2 hover:brightness-75 brightness-100"
                   alt={t("ingredients." + key)}
                   onClick={() => addIngredient(key)}

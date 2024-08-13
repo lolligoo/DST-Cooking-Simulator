@@ -36,7 +36,7 @@ export default function Food() {
     <div className="flex flex-col w-full items-center justify-center">
       <h1 className="text-3xl font-blod">{t("foods." + foodname)}</h1>
       <span className="flex w-56 h-56 bg-l bg-no-repeat bg-center items-center justify-center bg-cover mt-2">
-        <img src={`/images/cookbook_${foodname}.png`} className="w-48 h-48" />
+        <img src={`/images/foods/cookbook_${foodname}.png`} className="w-48 h-48" />
       </span>
       <div className="flex items-center mt-3">
         <span className="flex flex-col items-center hover:brightness-75 brightness-100">
@@ -46,7 +46,7 @@ export default function Food() {
             }&recipes=${food.recipes.concat()}`}
           >
             <img
-              src={`/images/${food.pot}.png`}
+              src={`/images/ui/${food.pot}.png`}
               className="w-16 h-16 rounded-md"
               alt={food.pot}
             />
