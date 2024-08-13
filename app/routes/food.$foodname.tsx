@@ -34,7 +34,7 @@ export default function Food() {
   const { t } = useTranslation();
   return (
     <div className="flex flex-col w-full items-center justify-center -mt-3">
-      <h1 className="text-xl font-bold bg-banner bg-cover bg-top w-80 h-16 content-center text-center">{t("foods." + foodname)}</h1>
+      <h1 className="text-xl font-medium bg-banner bg-cover bg-top w-80 h-16 content-center text-center">{t("foods." + foodname)}</h1>
       <span className="flex w-56 h-56 bg-l bg-no-repeat bg-center items-center justify-center bg-cover mt-2">
         <img src={`/images/foods/cookbook_${foodname}.png`} className="w-48 h-48" />
       </span>
