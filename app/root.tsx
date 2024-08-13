@@ -72,7 +72,7 @@ export default function App() {
   return (
     <div className="font-serif p-4 flex flex-col items-center w-full xl:w-3/5 fixed">
       <div className="w-full flex justify-between items-cente ">
-        <h1 className="font-medium content-center text-center text-sm">
+        <h1 className="font-bold content-center text-center text-sm">
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>
         </h1>
         <div className="flex">
