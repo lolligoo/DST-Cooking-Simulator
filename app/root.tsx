@@ -71,7 +71,7 @@ export default function App() {
   let { t } = useTranslation();
   const location = useLocation();
   return (
-    <div className="font-belisa p-4 flex flex-col items-center w-full xl:w-3/5 fixed font-medium text-xl">
+    <div className="font-sans p-4 flex flex-col items-center w-full xl:w-3/5 fixed">
       <div className="w-full flex justify-between items-cente ">
         <h1 className="font-medium content-center text-center">
           <NavLink to={"/?lng=" + locale}>{t("ui.title")}</NavLink>
