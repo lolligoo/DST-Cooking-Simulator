@@ -79,14 +79,14 @@ export default function App() {
         <div className="flex">
           <h1
             className={`w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium hover:brightness-75 brightness-100 ${
-              location.pathname.indexOf("cookpot") && "saturate-200"
+              location.pathname.indexOf("cookpot") != -1 && "saturate-200"
             }`}
           >
             <NavLink to={"cookpot?lng=" + locale}>{t("ui.cookpot")}</NavLink>
           </h1>
           <h1
             className={`w-20 h-9 bg-button bg-cover bg-no-repeat content-center text-center font-medium hover:brightness-75 brightness-100 ${
-              location.pathname.indexOf("foods") && "saturate-200"
+              location.pathname.indexOf("foods") != -1 && "saturate-200"
             }`}
           >
             <NavLink to={"foods?lng=" + locale}>{t("ui.foods")}</NavLink>

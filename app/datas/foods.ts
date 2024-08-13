@@ -1697,7 +1697,7 @@ const phaseTags = (names: string[]) => {
   let tags: { [key: string]: number } = {};
   names.map((n) => {
     let k = n.replace("_cooked", "").replace("_dried", "");
-    if (k !== "meat" && k !== "fish") {
+    if (k !== "meat" && k !== "fish" && n !== 'drumstick_cooked') {
       if (tags[k]) {
         tags[k] += 1;
       } else {
